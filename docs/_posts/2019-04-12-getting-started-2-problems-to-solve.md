@@ -28,6 +28,8 @@ The [Ratrig V-Slider DIY Camera Slider kit](https://ooznest.co.uk/product/v-slid
 > Lowest speed: 1 meter in 3 minutes  
 > Max. Power consumption: 0.29A  
 
+WIP: This needs more research
+
 
 ### Tracking the subject
 I was thinking this would need a second motor mounted on the camera gantry itself, but it looks like the commercial models use an adjustable rod mounted to the rails which is mechanically fixed to the granary and rotates it automatically across the traverse. 
@@ -50,11 +52,18 @@ I imagine you could set the amount of rotation quite easily by hand, by moving t
 
 This passive mechanical method would certainly save on complexity if I could make something similar work.
 
+WIP: I think for version 1 I might just put this whole problem aside and have a non-rotating gantry
+
 ### Synchronising time-lapse shutter release with motion
  
-From <https://www.amazon.co.uk/gp/customer-reviews/RDGLTSU4YIVCB/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B07BMLD4N4>
+From this review on a commercial slider:  <https://www.amazon.co.uk/gp/customer-reviews/RDGLTSU4YIVCB/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B07BMLD4N4>
 
-> Lots of good points, nice build quality, smooth, works pretty well - so mostly happy. But it has a flaw that is a little critical and its very surprising the manufacturers neither spotted it nor corrected it via firmware etc. On the timelapse setting, if you set a pause of, say, 2, seconds, it stops for 2 seconds, and then takes the picture at the point it starts moving again. This is a little insane. It needs to stop, take the picture at the *start* of the 2s gap, and then move. It must be still for the whole duration of the picture, obviously. This is such core functionality of the product its astonishing it doesn’t operate correctly. If the manufacturers could correct this via firmware or new controllers I would happily give this 5 stars.  
+> On the timelapse setting, if you set a pause of, say, 2, seconds, it stops for 2 seconds, and then takes the picture at the point it starts moving again. This is a little insane. It needs to stop, take the picture at the *start* of the 2s gap, and then move. It must be still for the whole duration of the picture, obviously. 
+
+It sounds like this slider also lets you control the shutter release on the camera. Which could be a nice feature, but is more than I'm trying to do here. Nevertheless, it might be important to try and synchronise shutter release with points when the gantry is stationary – if indeed there are any with the kind of motion control I end up using.
+
+WIP: I think I'm going to leave this until I have something built.
+
 
 
 ### Adjusting the gantry so it slides well on the rails
