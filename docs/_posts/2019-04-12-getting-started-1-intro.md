@@ -1,6 +1,6 @@
 ---
-permalink: getting started-1-intro/
-title: Getting Started – Introduction
+permalink: getting-started-1-intro/
+title: Getting Started 1 – Introduction
 date: 2019-04-12
 author: Andrew
 layout: page
@@ -96,4 +96,4 @@ But it uses this definitely-not-standardised [sliding ball-bearing rail and plat
 ![]({{site.baseurl}}/assets/1866-02.jpg)
 
 
-Next: [Problems to be Solved &rarr;](../getting-started-2-problems-to-solve)
+Next: [Problems to be Solved &rarr;](../getting-started-2-problems-to-solve/)

@@ -1,6 +1,6 @@
 ---
 permalink: getting-started-2-problems-to-solve/
-title: Getting Started – Problems to Solve
+title: Getting Started 2 – Problems to Solve
 date: 2019-04-12
 author: Andrew
 layout: page
