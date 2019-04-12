@@ -15,7 +15,15 @@ layout: page
 I want to use standardised aluminium extrusion for the rails. These provide the main structure of the slider, and are also the guide surface along which the gantry slides. This is a good guide: [Beginner’s Guide to Building Things With V-Slot Aluminum Extrusion](https://www.makeuseof.com/tag/beginners-guide-building-things-v-slot-aluminum-extrusion/)
 
 #### Choosing a profile
-There are different kinds of profile. [Notably T-slot and V-slot](https://www.makeuseof.com/tag/beginners-guide-building-things-v-slot-aluminum-extrusion/):
+There are different kinds of profile. I can't find a comprehensive list anywhere, but there do seem to be some common types, and others may only differ from these in non-essential ways.
+
+The two main profiles seems to be B-Type and I-Type (__Bosch Rexroth__ and __Item__ respectively). The B-type profile has a stepped slot, whereas the I-type has a smooth curve.
+
+RS Components sell [RS-Pro branded extrusion](https://uk.rs-online.com/web/p/tubing-struts/8508476/). This has a 5 mm groove, and a 4.3 mm central hole. According to [this chart](https://www.boltdepot.com/fastener-information/metric-tap-drill-size.aspx) that can be tapped for a 5 mm thread.
+
+They also have Bosch Rexroth branded extrusion with a 6 mm groove and a 5.5 mm central hole. Using that same table, that's a little off for tapping to a 6 mm thread, so I wonder if this is an imperial sizing?
+
+There is also a newcomer to the field: V-type. From the [Beginner’s Guide to Building Things With V-Slot Aluminum Extrusion](https://www.makeuseof.com/tag/beginners-guide-building-things-v-slot-aluminum-extrusion/):
 
 > T-Slot has a T-shaped groove on each side.
 > V-Slot is similar, but it has a slight bevelled edge.
@@ -25,10 +33,8 @@ While this may seem like only a minor difference, it has a big impact in their u
 
 > V-Slot was created by Mark Carew of OpenBuilds and is open source.
 
-But also [Bosch type and Item type](https://www.thingiverse.com/groups/hypercube-3d-printer/forums/general/topic:17170):
 
-> From what I found out, there are various extrusion types that differ in their cross section. There are (Bosch) B-Type extrusions which use 6mm slots for 2020 extrusions and are widely used internationally. There are also (Item) I-Type extrusions which use 5mm slots for 2020 extrusions and which are widely used in Germany or maybe Europe.
-
+The V-type, as the name suggests, has a straight V-shaped bevel. I would say B-type or V-type would be best to take bearings depending on cost and availability (the latter is less of an issue if they can be easily swapped out for another type). V-slot accepts M5 bolts, so I think – at this stage – that V- and I-type profiles should be quite interchangeable.
 
 #### Choosing size
 
@@ -64,28 +70,83 @@ So nothing to worry about at this length. However, if I made a 1 m long slider, 
 
 #### Choosing length
 
+While a bigger slider is always more useful, a smaller one is cheaper, and easier to store, so I think a better target for a first build. If I decide to remake it, I can always disassemble the first version and re-use some parts for a bigger one.
 
-
+**So – all other things being equal – I'll go for a 50 cm length.**
 
 #### Prices
 
-[2 x 50 cm 2020 V-Slot from Ooznest]: £9.60 (or both ends tapped with 5mm holes: £14.80)
+[2 x 50 cm 2020 V-Slot from Ooznest]: £9.60 + postage
 
-[50 cm 8040 C-Beam from Ooznest](https://ooznest.co.uk/product/c-beam-linear-rail-cut-to-size/): £14.80 (both ends tapped with 5mm holes: £16.24. I should be able to tap these myself if needed)
+[2 x 50 cm 2020 IR Range Aluminium Profile (I-type) from KJN]: £7 + postage
 
-I don't yet know the best kind of profile to use. Some options (for a 50cm) traverse are:
+[50 cm 8040 C-Beam from Ooznest](https://ooznest.co.uk/product/c-beam-linear-rail-cut-to-size/): £14.80 + postage (both ends tapped with 5mm holes: £16.24. I should be able to tap these myself if needed)
 
-20/20
+[1 m I-type from RS Components](https://uk.rs-online.com/web/p/tubing-struts/8508476/): £6.90 + postage
 
-20/40
+
+### Motor
+
+This project requires a stepper motor. For background on motors, see:
+* [Motors | code, circuits, & construction](http://www.tigoe.com/pcomp/code/circuits/motors/)
+
+On steppers specifically:
+* [Stepper Motor Quickstart Guide - SparkFun Electronics](https://www.sparkfun.com/tutorials/400)
+* [What is a Stepper Motor? -  Adafruit Learning System](https://learn.adafruit.com/all-about-stepper-motors)
+
+Figuring out which size of motor is complicated, so instead, I went for the soft option, and asked some people who have worked with them, and looked at what other projects use. The consensus was to go for the NEMA 17. You might think NEMA is a brand name for a motor, but no, NEMA stands for [National Electrical Manufacturers Association](http://en.wikipedia.org/wiki/National_Electrical_Manufacturers_Association). The 17 refers to the size of the faceplate - 1.7" x 1.7".
+
+According to <https://reprap.org/wiki/NEMA_Motor>
+> Some (all?) NEMA 17 motors (is this specified in the standard?) have blind mounting holes 4.5 mm deep, tapped to accept M3x.50 metric bolts. The 4 mounting holes are in a square 31.0 mm (1.220 inch, about 7/32) center-to-center. The holes in the part that needs to be bolted to the NEMA 17 motor typically need to be reamed out with a 1/8" drill bit to allow the M3 bolt to pass through. The drive shaft is typically 5 mm dia.
+
+According to <https://learn.adafruit.com/all-about-stepper-motors/types-of-steppers>:
+>The NEMA numbers define standard faceplate dimensions for mounting the motor. They do not define the other characteristics of a motor. Two different NEMA 17 motors may have entirely different electrical or mechanical specifications and are not necessarily interchangeable.
+
+Specs typically seem to vary on a number of common parameters:
+*  Number of steps per full rotation: 200 (1.8&deg; steps) or 400 (0.9&deg; steps). For timelapse, I would assume a finer step gradation would be better.
+* Current draw (i.e. power). These vary from about 0.3A to 2A. Some motor current are listed as 'per phase' so I don't know how comparable these are.
+* Unipolar or bipolar – from [the Adafruit guide](https://learn.adafruit.com/all-about-stepper-motors/types-of-steppers):
+  * Unipolar drivers, always energize the phases in the same way. One lead, the "common" lead, will always be negative. The other lead will always be positive. Unipolar drivers can be implemented with simple transistor circuitry. The disadvantage is that there is less available torque because only half of the coils can be energized at a time.")
+  * Bipolar drivers use H-bridge circuitry to actually reverse the current flow through the phases. By energizing the phases with alternating the polarity, all the coils can be put to work turning the motor.
+* 2-phase or 4-phase – from [the Adafruit guide](https://learn.adafruit.com/all-about-stepper-motors/types-of-steppers):
+  * A two phase bipolar motor has 2 groups of coils. A 4 phase unipolar motor has 4. A 2-phase bipolar motor will have 4 wires - 2 for each phase. Some motors come with flexible wiring that allows you to run the motor as either bipolar or unipolar.
+
+Lets look at some actual motors for sale:
+
+[**Ooznest**](https://ooznest.co.uk/product/nema17-stepper-motors/)
+* Bipolar
+* 2-phase
+* 1.33A – 2A per phase
+* 200 or 400 steps per rotation
+
+Their cheapest motor is a 200 step 1.4A model for £9.90 (NEMA17 Stepper Motors - 1.8° - 1701HS140A - 21oz - 1.40A)
+
+[**Cool Components**](https://coolcomponents.co.uk/products/stepper-motor-with-cable)
+
+This is a Sparkfun model, for about £15:
+
+* Step Angle (degrees) :1.8
+* 2 Phase
+* Rated Voltage : 12V
+* Rated Current : 0.33A
+* Holding Torque : 2.3kg*cm
+
+[**Adafruit**](https://www.adafruit.com/product/324) seem to have something quite similar. ($14, 350 mA, 4-wire bipolar, 1.8° steps (200/revolution))
+
+
+### Motor driver
+
+
+### Microcontroller
+
 
 ### Gantry
+
+Different sized bolts for camera mounts
 
 
 ### Wheels/bearings
 
-
-### Motor and electronics
 
 
 ### Belt

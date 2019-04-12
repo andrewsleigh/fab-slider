@@ -78,7 +78,7 @@ This mounts the motor at one end of the rail and uses a loop of timing belt to m
 
 #### DIY sliders
 There are several Fab Academy slider projects, e.g.:
-* Barcelona 2018: [Week 15: Machine design | Group4 Machine Design @FabAcademy](http://barcelonamachines.fabcloud.io/group4/2018/05/14/week15-machine-design.html)  / [Week 15 - Machine Design - Part II](http://fab.academany.org/2018/labs/barcelona/students/oscar-gonzalezfernandez//2018/05/16/Week-15-Machine-Design-Part-II.html) (Using a DRV8825 stepper motor driver
+* Barcelona 2018: [Week 15: Machine design - Group4 Machine Design @FabAcademy](http://barcelonamachines.fabcloud.io/group4/2018/05/14/week15-machine-design.html)  / [Week 15 - Machine Design - Part II](http://fab.academany.org/2018/labs/barcelona/students/oscar-gonzalezfernandez//2018/05/16/Week-15-Machine-Design-Part-II.html) (Using a DRV8825 stepper motor driver
 * Aachen 2018: [Fab Lab Aachen @ Fab Academy](http://fab.academany.org/2018/labs/fablabaachen/groupProjects/machine.html)
 
 And some on Instructables, such as: [Make an Arduino Controlled Motorized Camera Slider!: 13 Steps (with Pictures)](https://www.instructables.com/id/Make-a-Motorized-Camera-Slider/). This one adapts a non-motorised rail, using a Nema 17 stepper and ‘A4988 Compatible’ driver board.
