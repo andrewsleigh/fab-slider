@@ -51,12 +51,14 @@ Let's plug in some numbers:
 * E (modulus of elasticity) = 68.9 GPa (gigapascals) =  68.9 * 10<sup>9</sup> Pa
 
 Therefore deflection  
-= (9.81 * (0.5)<sup>3</sup>) / (48 * 68.9 * 10<sup>9</sup> * 6.988 * 10<sup>-9</sup>)
-= 1.22625 / 23110.7136
-= 0.000053 m
-= 0.053 mm
+= (9.81 * (0.5)<sup>3</sup>) / (48 * 68.9 * 10<sup>9</sup> * 6.988 * 10<sup>-9</sup>)  
+= 1.22625 / 23110.7136  
+= 0.000053 m  
+= 0.053 mm  
 
 So nothing to worry about at this length. However, if I made a 1 m long slider, deflection under ideal conditions for a 1 kg load would come out at: 9.81 / 23110.7136 = .00042 m = .42 mm. So for that span it might be worth using a more rigid profile.
+
+**For now, I'll go with 2020**
 
 
 
