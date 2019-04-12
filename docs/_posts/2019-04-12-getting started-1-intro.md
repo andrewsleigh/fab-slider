@@ -1,6 +1,6 @@
 ---
 
-title: Getting Started: Introduction
+title: Getting Started – Introduction
 date: 2019-04-12
 author: Andrew
 layout: page

@@ -1,6 +1,6 @@
 ---
 
-title: Getting Started: Problems to Solve
+title: Getting Started – Problems to Solve
 date: 2019-04-12
 author: Andrew
 layout: page
