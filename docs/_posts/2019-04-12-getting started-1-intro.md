@@ -1,16 +1,10 @@
 ---
-
 permalink: getting started-1-intro/
 title: Getting Started: Introduction
 date: 2019-04-12
 author: Andrew
 layout: page
-
 ---
-
-
-
-
 
 ## Introduction
 A camera slider is a simple machine that smoothly moves a still or video camera along a track, sometimes rotating the camera so it remains targeted at the same spot. It allows you to create more interesting and revealing time lapses, but also more interesting footage of still objects that can be used as part of a larger video project. For these reasons they are useful tools for makers who want to document processes, or show off final projects in videos.
@@ -62,7 +56,7 @@ There are many features I would like, but not all are achievable in version 1, s
 
 #### Commercial motorised sliders
 There are many similar looking Chinese sliders on Amazon, at about £320-£360, for example: 
-[GVM Camera Slider Track Dolly SlidersRail System with Motorized Time Lapse and Video Shot Follow Focus Shot and 120 Degree Panoramic Shooting 31”80cm](https://www.amazon.co.uk/GVM-Sliders-Motorized-Panoramic-Shooting/dp/B07BMLD4N4?ref_=fsclp_pl_dp_1):
+[GVM Camera Slider Track](https://www.amazon.co.uk/GVM-Sliders-Motorized-Panoramic-Shooting/dp/B07BMLD4N4?ref_=fsclp_pl_dp_1):
 
 ![]({{site.baseurl}}/assets/71kQOGjJWyL._SL1500_.jpg)
 
@@ -84,8 +78,8 @@ This mounts the motor at one end of the rail and uses a loop of timing belt to m
 
 #### DIY sliders
 There are several Fab Academy slider projects, e.g.:
-Barcelona 2018: [Week 15: Machine design | Group4 Machine Design @FabAcademy](http://barcelonamachines.fabcloud.io/group4/2018/05/14/week15-machine-design.html)  / [Week 15 - Machine Design - Part II](http://fab.academany.org/2018/labs/barcelona/students/oscar-gonzalezfernandez//2018/05/16/Week-15-Machine-Design-Part-II.html) (Using a DRV8825 stepper motor driver
-Aachen 2018: [Fab Lab Aachen @ Fab Academy](http://fab.academany.org/2018/labs/fablabaachen/groupProjects/machine.html)
+* Barcelona 2018: [Week 15: Machine design | Group4 Machine Design @FabAcademy](http://barcelonamachines.fabcloud.io/group4/2018/05/14/week15-machine-design.html)  / [Week 15 - Machine Design - Part II](http://fab.academany.org/2018/labs/barcelona/students/oscar-gonzalezfernandez//2018/05/16/Week-15-Machine-Design-Part-II.html) (Using a DRV8825 stepper motor driver
+* Aachen 2018: [Fab Lab Aachen @ Fab Academy](http://fab.academany.org/2018/labs/fablabaachen/groupProjects/machine.html)
 
 And some on Instructables, such as: [Make an Arduino Controlled Motorized Camera Slider!: 13 Steps (with Pictures)](https://www.instructables.com/id/Make-a-Motorized-Camera-Slider/). This one adapts a non-motorised rail, using a Nema 17 stepper and ‘A4988 Compatible’ driver board.
 
