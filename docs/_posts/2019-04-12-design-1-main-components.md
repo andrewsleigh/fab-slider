@@ -88,7 +88,7 @@ While a bigger slider is always more useful, a smaller one is cheaper, and easie
 ### Motor
 
 This project requires a stepper motor. For background on motors, see:
-* [Motors | code, circuits, & construction](http://www.tigoe.com/pcomp/code/circuits/motors/)
+* [Motors – code, circuits, & construction](http://www.tigoe.com/pcomp/code/circuits/motors/)
 
 On steppers specifically:
 * [Stepper Motor Quickstart Guide - SparkFun Electronics](https://www.sparkfun.com/tutorials/400)
