@@ -1,6 +1,6 @@
 ---
 
-permalink: 
+permalink: getting started-1-intro/
 title: Getting Started: Introduction
 date: 2019-04-12
 author: Andrew
