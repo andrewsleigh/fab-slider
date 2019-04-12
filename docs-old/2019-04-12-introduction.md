@@ -9,11 +9,6 @@ layout: page
 ---
 
 
-
-
-
----
-
 # Camera Slider page 1
 ## Format
 Introduction: Prior art, objectives, success measures, bigger picture
