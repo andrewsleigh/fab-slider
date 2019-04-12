@@ -1,13 +1,10 @@
 ---
 
-permalink: 
 title: Getting Started: Problems to Solve
 date: 2019-04-12
 author: Andrew
 layout: page
-
 ---
-
 
 ### Handling different speeds
 Will the same motor be able to handle both kinds of usage?
