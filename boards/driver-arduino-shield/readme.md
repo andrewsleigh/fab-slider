@@ -53,6 +53,7 @@ Note the comments below ("Unused header pins") about the arrangement on pins on 
 
 #### Digital inputs pin table (top-bottom)
 
+
 |    1    | (unused) |
 | Input 1 |          |
 | :-----: | :------: |
@@ -70,6 +71,7 @@ Note the comments below ("Unused header pins") about the arrangement on pins on 
 |    9    | (unused) |
 |   10    |   GND    |
 
+
 ### Using the analogue inputs
 
 There are 3 sets of 3 pins to allow the connection of 3 analogue inputs. Each set is wired up (top-bottom) VDD – Analogue input – GND. The analogue inputs used are (top-bottom) A2, A1, A0.
@@ -77,6 +79,7 @@ There are 3 sets of 3 pins to allow the connection of 3 analogue inputs. Each se
 Note the comments below about the arrangement on pins on this header. Specifically, the top pin is not used.
 
 #### Analogue inputs pin table (top-bottom)
+
 
 | :---: | :------: |
 |   1   | (unused) |
