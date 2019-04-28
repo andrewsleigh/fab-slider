@@ -80,7 +80,7 @@ Note the comments below about the arrangement on pins on this header. Specifical
 
 #### Analogue inputs pin table (top-bottom)
 
-
+|  Pin  | Connectn |
 | :---: | :------: |
 |   1   | (unused) |
 |   2   |   VDD    |
