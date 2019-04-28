@@ -53,7 +53,7 @@ Note the comments below ("Unused header pins") about the arrangement on pins on 
 
 #### Digital inputs pin table (top-bottom)
 
-
+|  Pin  | Connection |
 |    1    | (unused) |
 | Input 1 |          |
 | :-----: | :------: |
@@ -80,7 +80,7 @@ Note the comments below about the arrangement on pins on this header. Specifical
 
 #### Analogue inputs pin table (top-bottom)
 
-|  Pin  | Connectn |
+|  Pin  | Connection |
 | :---: | :------: |
 |   1   | (unused) |
 |   2   |   VDD    |
