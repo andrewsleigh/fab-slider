@@ -54,6 +54,7 @@ Note the comments below ("Unused header pins") about the arrangement on pins on 
 #### Digital inputs pin table (top-bottom)
 
 |  Pin  | Connection |
+| :-----: | :------: |
 |    1    | (unused) |
 | Input 1 |          |
 | :-----: | :------: |
