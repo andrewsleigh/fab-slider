@@ -78,6 +78,7 @@ Note the comments below about the arrangement on pins on this header. Specifical
 
 #### Analogue inputs pin table (top-bottom)
 
+| :---: | :------: |
 |   1   | (unused) |
 |   2   |   VDD    |
 |   3   |    A2    |
