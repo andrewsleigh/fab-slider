@@ -56,18 +56,15 @@ Note the comments below ("Unused header pins") about the arrangement on pins on 
 |  Pin  | Connection |
 | :-----: | :------: |
 |    1    | (unused) |
-| Input 1 |          |
-| :-----: | :------: |
+| **Input 1** |          |
 |    2    |   D10    |
 |    3    | (unused) |
 |    4    |   GND    |
-| Input 2 |          |
-| :-----: | :------: |
+| **Input 2** |          |
 |    5    |    D9    |
 |    6    | (unused) |
 |    7    |   GND    |
-| Input 3 |          |
-| :-----: | :------: |
+| **Input 3** |          |
 |    8    |    D8    |
 |    9    | (unused) |
 |   10    |   GND    |
@@ -101,4 +98,4 @@ The driver is mounted on the left-most 8 pins of the dual 10-pin headers in the 
 
 Analogue and digital inputs are connected in 3 sets of 3 pins each. This might be a slightly odd arrangement for the digital inputs, which only need two signals, but I'm using these for my end-stop switches, which have three terminals, and I want maximum flexibility in how I connect them. This is likely to change in a future version. Ignore the top pin of each of these headers.
 
-The choice of header on this board is largely driven by what I have available to me: 10-pin SMD female headers, and 6-pin through-board female headers. That's why there are unused pins on some of the headers, and why not all of the Arduino pins are exposed through the shield. If you have a better selection of header, feel free to adjust this design.
+The choice of header on this board is largely driven by what I have available to me: 10-pin SMD female headers, and 6-pin through-board female headers. That's why there are unused pins on some of the headers, and why not all of the Arduino pins are exposed through the shield. If you have a better selection of headers, feel free to adjust this design.
