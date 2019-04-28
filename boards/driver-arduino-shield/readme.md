@@ -2,7 +2,8 @@
 
 This is a simple shield to mount an A4988 stepper driver board onto an Arduino Uno giving easy access to the configuration pins, connections to the motor, and also separate breakouts to attach switches and analogue inputs for motion control
 
-![Shield labels](a4988-driver-arduino-shield-v1-labels.png)
+
+![Shield and boards together](motor-driver-shield-and-arduino.jpg)
 
 Features:
 * Mounting headers for a standard 'Stepstick'-style A4988 stepper motor driver
@@ -13,6 +14,10 @@ Features:
 * 6 pin header breaking out the main driver configuration pins: SLEEP, RESET, MS3, MS2, MS1, ENABLE (reading left-right)
 * One header to accept up to 3 digital inputs from buttons or end-stops (to Arduino I/O pins D10, D9, D8, reading top-bottom)
 * One header to accept up to three analogue inputs for example from potentiometers (to Arduino I/O pins A2, A1, A0, reading top-bottom)
+
+
+![Shield labels](a4988-driver-arduino-shield-v1-labels.png)
+
 
 ## Connecting the motor
 
@@ -56,15 +61,15 @@ Note the comments below ("Unused header pins") about the arrangement on pins on 
 |  Pin  | Connection |
 | :-----: | :------: |
 |    1    | (unused) |
-| **Input 1** |          |
+| **Input 1** |      |
 |    2    |   D10    |
 |    3    | (unused) |
 |    4    |   GND    |
-| **Input 2** |          |
+| **Input 2** |      |
 |    5    |    D9    |
 |    6    | (unused) |
 |    7    |   GND    |
-| **Input 3** |          |
+| **Input 3** |      |
 |    8    |    D8    |
 |    9    | (unused) |
 |   10    |   GND    |
@@ -81,12 +86,15 @@ Note the comments below about the arrangement on pins on this header. Specifical
 |  Pin  | Connection |
 | :---: | :------: |
 |   1   | (unused) |
+| **Input 1** |    |
 |   2   |   VDD    |
 |   3   |    A2    |
 |   4   |   GND    |
+| **Input 2** |    |
 |   5   |   VDD    |
 |   6   |    A1    |
 |   7   |   GND    |
+| **Input 3** |    |
 |   8   |   VDD    |
 |  19   |    A0    |
 |  10   |   GND    |
