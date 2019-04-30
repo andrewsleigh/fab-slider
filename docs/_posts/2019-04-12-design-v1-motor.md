@@ -1,6 +1,6 @@
 ---
 permalink: design-v1-motor/
-title: Designing version 1 – Choosing a motor
+title: Designing version 1 – Stepper motor
 date: 2019-04-12
 author: Andrew
 layout: page

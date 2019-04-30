@@ -1,6 +1,6 @@
 ---
 permalink: design-v1-driver/
-title: Designing version 1 – Choosing a motor
+title: Designing version 1 – Stepper motor driver
 date: 2019-04-12
 author: Andrew
 layout: page

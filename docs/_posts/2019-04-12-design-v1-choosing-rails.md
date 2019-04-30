@@ -1,6 +1,6 @@
 ---
 permalink: design-v1-rails/
-title: Designing version 1 – Choosing aluminium extrusion rails
+title: Designing version 1 – Aluminium extrusion rails
 date: 2019-04-12
 author: Andrew
 layout: page
