@@ -4,7 +4,7 @@ title: Designing version 1 – Choosing a motor
 date: 2019-04-12
 author: Andrew
 layout: page
-sort_id: 32
+sort_id: 33
 ---
 
 I don't know if it's actually possible to drive a stepper motor directly from an Arduino, but certainly all the projects I've seen use a separate driver chip on another board that can be connected to the microcontroller.
@@ -47,7 +47,7 @@ This board design is open source ([documented here](https://www.schmalzhaus.com/
 * [This on eBay](https://www.ebay.co.uk/p/EasyDriver-Shield-Stepping-Stepper-Motor-Driver-V44-A3967-for-Arduino/2169027753?iid=181921201075&chn=ps) (£1.30)
 
 
-There is another Allegro chip, the [A4988](https://cdn.sparkfun.com/datasheets/Robotics/A4988-Datasheet.pdf), which is rated to 35 V and ±2 A.
+There is another Allegro chip, the [A4988](https://cdn.sparkfun.com/datasheets/Robotics/A4988-Datasheet.pdf), which is rated to 35 V and 2 A.
 
 * This is used in Sparkfun's [Big Easy Driver](https://www.sparkfun.com/products/12859) ($20)
 * Pololu also have a much cheaper board: [A4988 Stepper Motor Driver Carrier](https://www.pololu.com/product/1182) $6
@@ -58,4 +58,4 @@ There are many others, including the [STMicroelectronics L293D](http://www.st.co
 
 [Reprap also has a good list of different driver chips.](https://reprap.org/wiki/Stepper_motor_driver)
 
-I went with a generic A4988-based board, originally one from Ooznest, which I fried, and then one from Elegoo (£11 for 5 boards). This is a clone of the RepRap [StepStick board](https://reprap.org/wiki/StepStick).
+I went with a generic A4988-based board, originally one from Ooznest, which I fried, and then one from Elegoo ([£11 for 5 boards](https://www.amazon.co.uk/Stepper-Stepstick-Headsink-Arduino-Machines/dp/B07B9ZKST7/ref=sr_1_5?keywords=a4988&qid=1556133738&s=gateway&sr=8-5)). This is a clone of the RepRap [StepStick board](https://reprap.org/wiki/StepStick).
