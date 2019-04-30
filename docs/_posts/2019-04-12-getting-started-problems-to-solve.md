@@ -65,7 +65,7 @@ From this review on a commercial slider:  <https://www.amazon.co.uk/gp/customer-
 
 It sounds like this slider also lets you control the shutter release on the camera. Which could be a nice feature, but is more than I'm trying to do here. Nevertheless, it might be important to try and synchronise shutter release with points when the gantry is stationary – if indeed there are any with the kind of motion control I end up using.
 
-WIP: I think I'm going to leave this until I have something built.
+<span class="wip">WIP</span> I'm going to leave this until I have something built.
 
 
 
@@ -78,26 +78,10 @@ A common solution in furniture design is to mount fixings into slots. This might
 
 ### Providing user controls and feedback
 
-WIP
+<span class="wip">WIP</span>. I'll need some sort of controls, but I'm not quite sure what yet.
 
 
 ### Stopping the motor when the slider reaches the end of the rail.
 
 
-WIP
-
-<!--
-
-Parts
-
-Timing belt and pulley
-https://learn.adafruit.com/bluetooth-motorized-camera-slider/overview
-> A GT2 timing pulley mounted to the stepper motor and a radial ball bearing allows a GT2 timing belt to pull the platform across the support slide rail.   
-
-https://www.adafruit.com/product/1184
-Timing Belt GT2 Profile - 2mm pitch - 6mm wide 1164mm long (582 teeth on a 2mm tooth pitch)
-
-![](Camera%20Slider%20page%201/gt2tooth.jpg)
-
-#Camera Slider#
- -->
+<span class="wip">WIP</span>. I'll need some way of letting the system know when the gantry has got to the end of the rails, so it can be stopped safely.
