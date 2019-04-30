@@ -1,0 +1,15 @@
+---
+layout: page
+---
+
+
+
+<h2>Journal</h2>
+{% assign sortedCourseNotes = site.posts | sort: 'date' %}
+  {% for item in sortedCourseNotes %}
+<h3><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></h3>
+<!-- <p>{{ item.excerpt }}</p> -->
+{% endfor %}
+
+
+<hr/>
