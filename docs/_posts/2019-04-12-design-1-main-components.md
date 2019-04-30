@@ -4,6 +4,7 @@ title: Design 1 – Main Components
 date: 2019-04-12
 author: Andrew
 layout: page
+id: 30
 ---
 
 ## Sketch
