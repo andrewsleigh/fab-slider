@@ -1,5 +1,5 @@
 ---
-permalink: design-v1-motor/
+permalink: design-v1-power/
 title: Designing version 1 – Power supply
 date: 2019-04-12
 author: Andrew

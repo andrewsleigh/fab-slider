@@ -1,5 +1,5 @@
 ---
-permalink: design-v1-main-components/
+permalink: design-v1-everything-else/
 title: Designing version 1 – Everything else
 date: 2019-04-12
 author: Andrew

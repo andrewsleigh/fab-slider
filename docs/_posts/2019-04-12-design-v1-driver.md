@@ -1,5 +1,5 @@
 ---
-permalink: design-v1-motor/
+permalink: design-v1-driver/
 title: Designing version 1 – Choosing a motor
 date: 2019-04-12
 author: Andrew
