@@ -22,14 +22,14 @@ The gantry is pretty much a flat piece, but has recesses for bolt heads, and in 
 
 ### 3D-printed gantry
 
-The bottom side (on the right) shows the support still to be removed where the D-ring camera screw sits.
+The bottom side (on the right) shows the printing support still to be removed where the D-ring camera screw sits.
 
-The coverplate is a separate piece not show here.
+The coverplate is a separate piece not shown here.
 
 ![gantry-3d-print-top-and-bottom.jpg](gantry-3d-print-top-and-bottom.jpg)
 
 ### Laser-cut gantry
 
-The two main parts are simply glued together, with the cover plate screwed on afterwards.
+The two main parts are simply glued together, with the cover plate screwed on after the D-ring screw has been placed in its cavity.
 
 ![gantry-laser-cut-top-and-bottom.jpg](gantry-laser-cut-top-and-bottom.jpg)
