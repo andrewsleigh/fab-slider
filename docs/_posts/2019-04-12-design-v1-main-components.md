@@ -24,4 +24,5 @@ The project can be split into a number of components. I'll address each on their
 * [Microcontroller board](../design-v1-microcontroller/)
 * [Power supply](../design-v1-power/)
 * [Gantry for camera](../design-v1-gantry/)
+* [Endstops](../design-v1-endstops/)
 * [User controls, brackets, feet, fixings and everything else](../design-v1-everything-else/)

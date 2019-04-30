@@ -4,7 +4,7 @@ title: Designing version 1 – Everything else
 date: 2019-04-12
 author: Andrew
 layout: page
-sort_id: 37
+sort_id: 38
 ---
 
 I will also need to design and make/buy a load of other things, which I haven't thought through fully yet.
