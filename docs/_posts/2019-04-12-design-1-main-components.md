@@ -8,7 +8,7 @@ layout: page
 
 ## Sketch
 
-This sketch shows one end of the slider from the top. The two lengths of 2020 extend to the left, the motor is mounted on the right with a right angle bracket which is fixed to the front plat of the motor, and to the central holes in each of the aluminium rails.
+This sketch shows one end of the slider from the top. The two lengths of 2020 extend to the left, the motor is mounted on the right with a right angle bracket which is fixed to the front plate of the motor, and to the central holes in each of the aluminium rails.
 
 ![]({{site.baseurl}}/assets/slider-top-view-motor.jpg)
 
@@ -242,7 +242,7 @@ For portable power, an [8 x AA battery power pack](https://www.adafruit.com/prod
 
 ### Gantry
 
-The gantry is basically just a flat plate with mounting holes for attching different devices, and for the wheels and timing belt.
+The gantry is basically just a flat plate with mounting holes for attaching different devices, and for the wheels and timing belt.
 
 Ooznest sell an [aluminium gantry plate](https://ooznest.co.uk/product/c-beam-gantry-plate-kit/)for the 8040 V-slot C-beam (in a kit form with delrin wheels for £25). This C-beam has a 40 mm channel down the middle, so it should be adaptable for two lengths of 2020 mounted 40 mm apart.
 
@@ -283,7 +283,7 @@ This image of the Ooznest gantry show the kind of method I'd like to use. As the
 
 ![]({{site.baseurl}}/assets/Mini-V-Gantry-Plate-Kit-6.jpg)
 
-Some kits (e..g the OOznest kit) use eccentric spacers to allow the wheels to be adjusted in fine increments. A simpler – and perhaps adequate – solution would be to use slots rather than round holes to accept the wheel bolts.
+Some kits (e..g the Ooznest kit) use eccentric spacers to allow the wheels to be adjusted in fine increments. A simpler – and perhaps adequate – solution would be to use slots rather than round holes to accept the wheel bolts.
 
 ### Wheels/bearings
 
@@ -356,6 +356,15 @@ Or you can buy complete kits of belts, pulleys and idler pulleys ([This, £15 on
 
 WIP
 
+
+### Controls and screen
+
+WIP!
+
+### End stops
+
+I have some end-stop switches left over from a previous project.
+
 ### Tripod mount
 
 This is a 'nice-to-have' feature, but shouldn't be difficult to implement. I just need a plate on the bottom of the rails with a threaded hole (or captured nut) to accept a 1/4" (or possibly 3/8") UNC threaded bolt. These are the [standard sizes for tripod mounts](http://www.photokonnexion.com/photography-thread-size/):
@@ -390,3 +399,6 @@ I think for version 1, this could be an entirely separate assembly, since only a
 It would be nice if the design could standardise on one bolt size, say M5, with one head type. For example, if all bolts had Allen key heads of the same size, you could attach the correct key somewhere on the frame of the machine, for easy adjustment or tightening.
 
 (Maybe I should get an assortment set?)
+
+
+#### T Nuts and brackets?

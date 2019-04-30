@@ -95,5 +95,7 @@ But it uses this definitely-not-standardised [sliding ball-bearing rail and plat
 
 ![]({{site.baseurl}}/assets/1866-02.jpg)
 
+This is a pretty good tutorial on the electronics side (and includes functionality to trigger the shutter release from the Arduino as well as handling the slider itself): [Motion Control With Arduino: Motorising a Camera Slider](https://computers.tutsplus.com/tutorials/motion-control-with-arduino-motorising-a-camera-slider--cms-21539)
+
 
 Next: [Problems to be Solved &rarr;](../getting-started-2-problems-to-solve/)

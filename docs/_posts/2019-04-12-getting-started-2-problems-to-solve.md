@@ -32,33 +32,33 @@ WIP: This needs more research
 
 
 ### Tracking the subject
-I was thinking this would need a second motor mounted on the camera gantry itself, but it looks like the commercial models use an adjustable rod mounted to the rails which is mechanically fixed to the granary and rotates it automatically across the traverse. 
+I was thinking this would need a second motor mounted on the camera gantry itself, but it looks like the commercial models use an adjustable rod mounted to the rails which is mechanically fixed to the granary and rotates it automatically across the traverse.
 
-See for example, [this commercial model](https://www.amazon.co.uk/Motorized-centimeter-Time-lapse-Camecord-Photography/dp/B07D55FZFW?ref_=fsclp_pl_dp_8) (which seems like one of many Chinese clones): 
+See for example, [this commercial model](https://www.amazon.co.uk/Motorized-centimeter-Time-lapse-Camecord-Photography/dp/B07D55FZFW?ref_=fsclp_pl_dp_8) (which seems like one of many Chinese clones):
 
 ![]({{site.baseurl}}/assets/71-b6ihMN1L._SL1500_.jpg)
 
 ![]({{site.baseurl}}/assets/71AX-0GRitL._SL1500_.jpg)
 
 
-The central rod is attached in a swivel mount to the camera gantry. The rod ends can be moved to any position on each end of the rail. By pulling one side of the gantry forward or back, it rotates the whole gantry. 
+The central rod is attached in a swivel mount to the camera gantry. The rod ends can be moved to any position on each end of the rail. By pulling one side of the gantry forward or back, it rotates the whole gantry.
 
 In the picture below (1) shows how the rod is adjusted, (7) shows how the rod interfaces with the gantry.
 
 ![]({{site.baseurl}}/assets/71I+bMzPbNL._SL1500_.jpg)
 
 
-I imagine you could set the amount of rotation quite easily by hand, by moving the camera to each end of the rail, and adjusting it so that it remains locked on the subject. (Or otherwise, if you want what they call ‘panorama shooting’). 
+I imagine you could set the amount of rotation quite easily by hand, by moving the camera to each end of the rail, and adjusting it so that it remains locked on the subject. (Or otherwise, if you want what they call ‘panorama shooting’).
 
 This passive mechanical method would certainly save on complexity if I could make something similar work.
 
 WIP: I think for version 1 I might just put this whole problem aside and have a non-rotating gantry
 
 ### Synchronising time-lapse shutter release with motion
- 
+
 From this review on a commercial slider:  <https://www.amazon.co.uk/gp/customer-reviews/RDGLTSU4YIVCB/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B07BMLD4N4>
 
-> On the timelapse setting, if you set a pause of, say, 2, seconds, it stops for 2 seconds, and then takes the picture at the point it starts moving again. This is a little insane. It needs to stop, take the picture at the *start* of the 2s gap, and then move. It must be still for the whole duration of the picture, obviously. 
+> On the timelapse setting, if you set a pause of, say, 2, seconds, it stops for 2 seconds, and then takes the picture at the point it starts moving again. This is a little insane. It needs to stop, take the picture at the *start* of the 2s gap, and then move. It must be still for the whole duration of the picture, obviously.
 
 It sounds like this slider also lets you control the shutter release on the camera. Which could be a nice feature, but is more than I'm trying to do here. Nevertheless, it might be important to try and synchronise shutter release with points when the gantry is stationary – if indeed there are any with the kind of motion control I end up using.
 
@@ -72,7 +72,18 @@ The [Ratrig V-Slider DIY Camera Slider kit](https://ooznest.co.uk/product/v-slid
 
 A common solution in furniture design is to mount fixings into slots. This might be a simpler method, needing fewer specialised parts, but is also less finely adjustable.
 
-<!-- 
+
+### Providing user controls and feedback
+
+WIP
+
+
+### Stopping the motor when the slider reaches the end of the rail.
+
+
+WIP
+
+<!--
 
 Parts
 
@@ -81,7 +92,7 @@ https://learn.adafruit.com/bluetooth-motorized-camera-slider/overview
 > A GT2 timing pulley mounted to the stepper motor and a radial ball bearing allows a GT2 timing belt to pull the platform across the support slide rail.   
 
 https://www.adafruit.com/product/1184
-Timing Belt GT2 Profile - 2mm pitch - 6mm wide 1164mm long (582 teeth on a 2mm tooth pitch) 
+Timing Belt GT2 Profile - 2mm pitch - 6mm wide 1164mm long (582 teeth on a 2mm tooth pitch)
 
 ![](Camera%20Slider%20page%201/gt2tooth.jpg)
 
