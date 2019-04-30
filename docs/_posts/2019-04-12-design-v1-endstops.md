@@ -61,7 +61,9 @@ From <http://marlinfw.org/docs/hardware/endstops.html>
 
 > Endstop with capacitor  
 > A more simple variant, that can easily be fitted to existing endstops is a 100nF capacitor, soldered over the two endstop connector pins (in parallel):  
-![](Endstops/switch_cap.png)
+
+![]({{site.baseurl}}/assets/switch_cap.png)
+
 
 
 ## What to do when you hit the switch?
