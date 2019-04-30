@@ -14,7 +14,7 @@ Current version on Github: <a href="https://github.com/andrewsleigh/fab-slider">
 </ul>
 
 <h2>Journal</h2>
-{% assign sortedJournal = site.posts | sort: 'sort_id' | reverse %}
+{% assign sortedJournal = site.posts | sort: 'sort_id' %}
   {% for item in sortedJournal %}
 <h3><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></h3>
 <!-- <p>{{ item.excerpt }}</p> -->
