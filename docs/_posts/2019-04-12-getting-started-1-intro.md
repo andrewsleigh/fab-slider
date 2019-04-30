@@ -4,7 +4,7 @@ title: Getting Started 1 – Introduction
 date: 2019-04-12
 author: Andrew
 layout: page
-id: 10
+sort_id: 10
 ---
 
 ## Introduction
