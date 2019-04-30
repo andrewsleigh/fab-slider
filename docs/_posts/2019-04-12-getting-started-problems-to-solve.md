@@ -1,11 +1,13 @@
 ---
-permalink: getting-started-2-problems-to-solve/
-title: Getting Started 2 – Problems to Solve
+permalink: getting-started-problems-to-solve/
+title: Getting started – Problems already I know I need to solve
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 20
 ---
+
+I assume there will be all sorts of problems I need to solve in order to make this. At this stage, these are the ones I can think of.
 
 ### Handling different speeds
 Will the same motor be able to handle both kinds of usage?

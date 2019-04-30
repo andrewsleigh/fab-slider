@@ -1,6 +1,6 @@
 ---
-permalink: getting-started-1-intro/
-title: Getting Started 1 – Introduction
+permalink: getting-started-why/
+title: Getting started – Why am I doing this, and what am I trying to make?
 date: 2019-04-12
 author: Andrew
 layout: page

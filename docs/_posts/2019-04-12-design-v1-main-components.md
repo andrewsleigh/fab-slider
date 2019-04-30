@@ -1,6 +1,6 @@
 ---
-permalink: design-1-main-components/
-title: Design 1 – Main Components
+permalink: design-v1-main-components/
+title: Designing version 1 – Main components
 date: 2019-04-12
 author: Andrew
 layout: page
@@ -9,12 +9,26 @@ sort_id: 30
 
 ## Sketch
 
-This sketch shows one end of the slider from the top. The two lengths of 2020 extend to the left, the motor is mounted on the right with a right angle bracket which is fixed to the front plate of the motor, and to the central holes in each of the aluminium rails.
+This (bad) sketch shows one end of the slider from the top. The two lengths of 2020 extend to the left, the motor is mounted on the right with a right angle bracket which is fixed to the front plate of the motor, and to the central holes in each of the aluminium rails.
 
 ![]({{site.baseurl}}/assets/slider-top-view-motor.jpg)
 
 
 ## Main Components
+
+The project can be split into a number of components. I'll address each on their own page:
+
+* Aluminium extrusion rails
+* Stepper motor (and transmission)
+* Motor driver board
+* Microcontroller board
+* Power supply
+* Gantry for camera
+* Brackets, feet and other assembly fixings
+
+
+
+
 
 ### Rails
 
