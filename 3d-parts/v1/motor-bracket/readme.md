@@ -4,7 +4,7 @@ This is a very simple bracket that mounts a standard NEMA 17-size motor through 
 
 ![motor-bracket-assembly-diagram.png](motor-bracket-assembly-diagram.png)
 
-(The part sandwiched between the bracket and the extrusion here is the [end cap](/../extrusion-end-caps/).)
+(The part sandwiched between the bracket and the extrusion here is the [end cap](../extrusion-end-caps/).)
 
 This mounting approach relies on the extrusion having M5 holes tapped into the central holes. Some suppliers (like Ooznest) will do this for you, or you can do it yourself.
 
