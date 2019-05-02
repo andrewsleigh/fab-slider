@@ -47,7 +47,6 @@ The result:
 ### Right side –  viewed from the bottom – reading top to bottom)
 
 |   GND    | There are three GND (Ground) pins on the Big Easy Driver. They are all connected together inside the board. Connect the negative side of your power supply; as well as from any other boards you are using to drive the Easy Driver to one or more of the GND pins. |
-| :------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | **VDD**  |                          This is an OUTPUT pin that will provide either 5V (default) or 3.3V from the voltage regulator; at a small amount of current (say 50mA - depends on input voltage) to power a circuit that you may need powered.                           |
 |    1B    |                         These are the motor connections. See below diagrams for how to hook these up. A and B are the two coils of the motor and can swap the two wires for a given coil (it will just reverse the direction of the motor).                         |
 |    1A    |                                                                                                                             (as above)                                                                                                                              |
@@ -249,4 +248,4 @@ I don't know why this is in the example code. If it's made redundant only by the
 
 Have I used this incorrectly? My motor does have 4 wires... I think when I set this I may have been confusing the control wires (STEP and DIRECTION) and the motor coil wires.
 
-I wonder if this is causing some of the problems I'm having... <span class="wip">WIP</span> 
+I wonder if this is causing some of the problems I'm having... <span class="wip">WIP</span>
