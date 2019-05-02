@@ -167,7 +167,9 @@ As noted above, for some settings of the current trimmer, the motor seemed to mo
 
 ## AccelStepper Arduino library
 
-Then I went looking for a library that would let me control the motor easily without having to write code to pulse the STEP pin manually. Arduino has a built-in stepper library, but I also found the AccelStepper library, which seems to be more fully-featured, though lacking in any basic documentation beyond the class/function reference, which is not very helpful when you're getting started.
+Then I went looking for a library that would let me control the motor easily without having to write code to pulse the STEP pin manually. Arduino has a built-in stepper library, but I also found the AccelStepper library, which seems to be more fully-featured, though lacking in much basic documentation beyond the class/function reference, which is not very helpful when you're getting started.
+
+You can install this library, with examples, through the Arduino Library Manager.
 
 Here's the basic sketch to get the motor turning at a set speed:
 
@@ -196,24 +198,55 @@ void loop()
 ```
 
 Note the [parameters passed to the constructor function](http://www.airspayce.com/mikem/arduino/AccelStepper/classAccelStepper.html#a3bc75bd6571b98a6177838ca81ac39ab). The default format is:
-`AccelStepper stepper;`. By using the format, `AccelStepper stepper(AccelStepper::FULL2WIRE, 3, 2);` I'm specifiying a particular kind of motor (perhaps incorrectly...) and setting pin 3 to be the STEP pin, and 2 to be the DIRECTION pin.
+`AccelStepper stepper;`. By using the format, `AccelStepper stepper(AccelStepper::FULL2WIRE, 3, 2);` I'm specifying a particular kind of motor (perhaps incorrectly...) and setting pin 3 to be the STEP pin, and 2 to be the DIRECTION pin.
 
-//AccelStepper stepper; // Defaults to AccelStepper::FULL4WIRE (4 pins) on 2, 3, 4, 5
 
 There is [some useful explanation here](https://groups.google.com/forum/#!topic/accelstepper/548T1E4tbfo):
 
 > So the first parameter is the interface type, and is one of the types listed (1, 2, 4, 6 or 8), and the parameters after that define the actual pins that are wired up. The examples don't show anything except the default way of accessing the object, without any parameters at all, which maybe doesn't help.
-
+>
 > `AccelStepper stepper(1, 3, 2);` is synonymous with `AccelStepper stepper(AccelStepper::DRIVER, 3, 2);` which might make a bit more sense.
-
+>
 > The above means that the stepper object is created, interfaced to a hardware stepper motor driver (like a DRV8825) using two wires from arduino pins D3 and D2.
-
+>
 > Again looking at the docs, for the constructor, pin1 (defined as D3 in your example) is the step input to the driver and pin2 (defined as D2 in your example) is the direction input to the driver.
 
+## Problems
+
+### Noise and vibration
+
+That worked, but it was super noisy. (I think this is due to the STEP pin being pulsed...) I tried using the micro-step functions and increasing the speed to compensate, however, after turning this up to, I think 6000, my motor stopped working. I ordered some new drivers, which did work, so I can only assume I fried the driver board.
+
+
+### Stopping the motors using the stop() function
+
+I also tried simulating the effect of the gantry hitting the end-stop switch:
+
+```
+void loop()
+{  
+   stepper.runSpeed();
+
+  // while the button is pressed ...
+  while (digitalRead(buttonPin) == HIGH) {
+   stepper.stop();
+  }  
+}   
+```
+
+While this worked, I found that after I released the button the motor didn't start properly again, just grinding without moving.
+
+I got around this by not using the  `stepper.stop();` function, and instead putting the `stepper.runSpeed();` function inside a conditional. But it would be good to understand the cause of the problem. <span class="wip">WIP</span>
+
+
+### Purpose of setMaxSpeed() function
+
+<span class="wip">WIP</span>
+
+I don't know why this is in the example code. If it's made redundant only by the use of the runSpeed() function instead of run(), why is it in the example code?
 
 ### FULL2WIRE parameter in AccelStepper constructor
 
-<span class="wip">WIP</span> Have I used this incorrectly? My motor does have 4 wires...
+Have I used this incorrectly? My motor does have 4 wires... I think when I set this I may have been confusing the control wires (STEP and DIRECTION) and the motor coil wires.
 
-
-### Motor speed limits
+I wonder if this is causing some of the problems I'm having... <span class="wip">WIP</span> 
