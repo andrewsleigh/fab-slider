@@ -46,16 +46,14 @@ The result:
 
 ### Right side –  viewed from the bottom – reading top to bottom)
 
-|   GND    | There are three GND (Ground) pins on the Big Easy Driver. They are all connected together inside the board. Connect the negative side of your power supply; as well as from any other boards you are using to drive the Easy Driver to one or more of the GND pins. |                                                                                                |
-| **VDD**  |                          This is an OUTPUT pin that will provide either 5V (default) or 3.3V from the voltage regulator; at a small amount of current (say 50mA - depends on input voltage) to power a circuit that you may need powered.                           |                                                                                                |
-|    1B    |                                                                        These are the motor connections. See below diagrams for how to hook these up. A and B are the two coils of the motor                                                                         | and can swap the two wires for a given coil (it will just reverse the direction of the motor). |
-|    1A    |                                                                                                                             (as above)                                                                                                                              |                                                                                                |
-|    2A    |                                                                                                                             (as above)                                                                                                                              |                                                                                                |
-|    2B    |                                                                                                                             (as above)                                                                                                                              |                                                                                                |
-|   GND    |                                                                                                                           (as GND above)                                                                                                                            |                                                                                                |
-| **VMOT** |                                                                     M+ : This is the power input to the Easy Driver. Connect this to the positive power supply lead. This should be a 6V to 30V                                                                     |                     3A (or more) power supply that is clean (low ripple).                      |
-
-
+|   GND    | There are three GND (Ground) pins on the Big Easy Driver. They are all connected together inside the board. Connect the negative side of your power supply; as well as from any other boards you are using to drive the Easy Driver to one or more of the GND pins. |                                                       |
+| **VDD**  |                          This is an OUTPUT pin that will provide either 5V (default) or 3.3V from the voltage regulator; at a small amount of current (say 50mA - depends on input voltage) to power a circuit that you may need powered.                           |                                                       |
+|    1B    |                         These are the motor connections. See below diagrams for how to hook these up. A and B are the two coils of the motor and can swap the two wires for a given coil (it will just reverse the direction of the motor).                         |                                                       |
+|    1A    |                                                                                                                             (as above)                                                                                                                              |                                                       |
+|    2A    |                                                                                                                             (as above)                                                                                                                              |                                                       |
+|    2B    |                                                                                                                             (as above)                                                                                                                              |                                                       |
+|   GND    |                                                                                                                           (as GND above)                                                                                                                            |                                                       |
+| **VMOT** |                                                                     M+ : This is the power input to the Easy Driver. Connect this to the positive power supply lead. This should be a 6V to 30V                                                                     | 3A (or more) power supply that is clean (low ripple). |
 
 
 
@@ -74,17 +72,149 @@ And from [In-Depth: Interface A4988 Stepper Motor Driver Module with Arduino](ht
 > WARNING
 > Connecting or disconnecting a stepper motor while the driver is powered can destroy the driver.
 
+### Voltage spikes
+
+
+From [In-Depth: Interface A4988 Stepper Motor Driver Module with Arduino](https://lastminuteengineers.com/a4988-stepper-motor-driver-arduino-tutorial/):
+
+> According to datasheet, the motor supply requires appropriate decoupling capacitor close to the board, capable of sustaining 4A.
+> WARNING
+> This driver has low-ESR ceramic capacitors on board, which makes it vulnerable to voltage spikes. In some cases, these spikes can exceed the 35V(maximum voltage rating of A4988), potentially permanently damaging the board and even the motor.
+> One way to protect the driver from such spikes is to put a large 100µF (at least 47µF) electrolytic capacitor across motor power supply pins.
+
+At the moment, I'm driving the motor from the 12V VIN supply on my Arduino, which I believe has protection against spikes, however, this modification would be easy to implement on a dedicated power supply.
+
 ### Allowing the motor to draw too much current
 
-<span class="wip">WIP</span> This is definitely an area where I need to do more work.
+<span class="wip">WIP</span> This is definitely an area where I need to do more work. See below.
+
+
+## Adjusting current draw
+
+Many explanations of these driver boards talk about the need to adjust the current draw using the small trimmer potentiometer. My board even came with a tiny screwdriver for just this purpose.
+
+However, my attempts to do this were physically a mess (it's difficult to connect everything up) and the results were difficult to interpret. (Turning the trimmer seemed to affect the current draw in inconsistent ways, with none of the readings making any sense, given the data I do know about the motor, power supply and so on.)
+
+The [instructions here](https://lastminuteengineers.com/a4988-stepper-motor-driver-arduino-tutorial/) are the best I've found, but still, my experience wasn't this tidy.
+
+In the end, I hd to adjust this trimmer to get the motor to work smootly, and that became my measure of where to set it.
+
+<span class="wip">WIP</span>
+
+## Simple programs
+
+There are many simple stepper programs that make the motor turn, without the use of libraries or the motor's special modes.
+
+Here's one:
+
+```
+/*     Simple Stepper Motor Control Exaple Code  
+ *  by Dejan Nedelkovski, www.HowToMechatronics.com
+ */
+// defines pins numbers
+const int stepPin = 3;
+const int dirPin = 2;
+
+void setup() {
+  // Sets the two pins as Outputs
+  pinMode(stepPin,OUTPUT);
+  pinMode(dirPin,OUTPUT);
+}
+void loop() {
+  digitalWrite(dirPin,HIGH); // Enables the motor to move in a particular direction
+  // Makes 200 pulses for making one full cycle rotation
+  for(int x = 0; x < 200; x++) {
+    digitalWrite(stepPin,HIGH);
+    delayMicroseconds(500);
+    digitalWrite(stepPin,LOW);
+    delayMicroseconds(500);
+  }
+  delay(1000); // One second delay
+
+  digitalWrite(dirPin,LOW); //Changes the rotations direction
+  // Makes 400 pulses for making two full cycle rotation
+  for(int x = 0; x < 400; x++) {
+    digitalWrite(stepPin,HIGH);
+    delayMicroseconds(500);
+    digitalWrite(stepPin,LOW);
+    delayMicroseconds(500);
+  }
+  delay(1000);
+}
+
+```
+
+And this demonstrates the most basic functions of the driver chip: to set direction, and speed:
+
+> **Control Spinning Direction**: To control the spinning direction of a motor we set the DIR pin either HIGH or LOW. A HIGH input spins the motor clockwise and a LOW will spin it counterclockwise.
+>
+> **Control Speed**: The speed of a motor is determined by the frequency of the pulses we send to the STEP pin. The higher the pulses, the faster the motor runs. A pulses is nothing but pulling the output HIGH, waiting a bit then pulling it LOW and waiting again. By changing the delay between two pulses, you change the frequency of those pulses and hence the speed of a motor.
+
+## Initial problems
+
+### Floating RESET pin
+
+Initially, when I tried this code, nothing happened, except a slight grinding noise when I jiggled the board around, or moved my hand close to it. After, some digging, I found [this bit of essential advice](https://lastminuteengineers.com/a4988-stepper-motor-driver-arduino-tutorial/):
+
+> The RST pin is floating. If you are not using the pin, you can connect it to the adjacent SLP/SLEEP pin to bring it high and enable the driver.
+
+Floating pins are a familiar source of unreliable input. If you’ve ever tried to wire up a simple button to an Arduino and had it behave seemingly randomly, you’ve experienced this. In particular, just moving your hand close to the board can be enough to change the voltage on the pin. So I suspected this might be the problem, and sure, enough, when I connected together RESET and SLEEP, my demo Arduino sketch worked fine.
+
+### Adjusting current
+
+As noted above, for some settings of the current trimmer, the motor seemed to move unreliably, or with a lot of noise or vibration. I tried turning the trimmer (I don't know which way is 'up') and that seemed to help.
 
 
 
-Adjusting current draw
+## AccelStepper Arduino library
+
+Then I went looking for a library that would let me control the motor easily without having to write code to pulse the STEP pin manually. Arduino has a built-in stepper library, but I also found the AccelStepper library, which seems to be more fully-featured, though lacking in any basic documentation beyond the class/function reference, which is not very helpful when you're getting started.
+
+Here's the basic sketch to get the motor turning at a set speed:
 
 
+```
+// ConstantSpeed.pde
+// -*- mode: C++ -*-
+/// \author  Mike McCauley (mikem@airspayce.com)
+// Copyright (C) 2009 Mike McCauley
+// $Id: ConstantSpeed.pde,v 1.1 2011/01/05 01:51:01 mikem Exp mikem $
 
-Simple programs
+#include <AccelStepper.h>
+
+AccelStepper stepper(AccelStepper::FULL2WIRE, 3, 2);
+
+void setup()
+{  
+   stepper.setMaxSpeed(1000);
+   stepper.setSpeed(150);
+}
+
+void loop()
+{  
+   stepper.runSpeed();
+}
+```
+
+Note the [parameters passed to the constructor function](http://www.airspayce.com/mikem/arduino/AccelStepper/classAccelStepper.html#a3bc75bd6571b98a6177838ca81ac39ab). The default format is:
+`AccelStepper stepper;`. By using the format, `AccelStepper stepper(AccelStepper::FULL2WIRE, 3, 2);` I'm specifiying a particular kind of motor (perhaps incorrectly...) and setting pin 3 to be the STEP pin, and 2 to be the DIRECTION pin.
+
+//AccelStepper stepper; // Defaults to AccelStepper::FULL4WIRE (4 pins) on 2, 3, 4, 5
+
+There is [some useful explanation here](https://groups.google.com/forum/#!topic/accelstepper/548T1E4tbfo):
+
+> So the first parameter is the interface type, and is one of the types listed (1, 2, 4, 6 or 8), and the parameters after that define the actual pins that are wired up. The examples don't show anything except the default way of accessing the object, without any parameters at all, which maybe doesn't help.
+
+> `AccelStepper stepper(1, 3, 2);` is synonymous with `AccelStepper stepper(AccelStepper::DRIVER, 3, 2);` which might make a bit more sense.
+
+> The above means that the stepper object is created, interfaced to a hardware stepper motor driver (like a DRV8825) using two wires from arduino pins D3 and D2.
+
+> Again looking at the docs, for the constructor, pin1 (defined as D3 in your example) is the step input to the driver and pin2 (defined as D2 in your example) is the direction input to the driver.
 
 
-Arduino libraries
+### FULL2WIRE parameter in AccelStepper constructor
+
+<span class="wip">WIP</span> Have I used this incorrectly? My motor does have 4 wires...
+
+
+### Motor speed limits
