@@ -125,6 +125,14 @@ Fortunately, Thingiverse has plenty of solutions for this problem, so I printed 
 
 ## Stepper Driver Arduino shield  (<a href="https://github.com/andrewsleigh/fab-slider/tree/master/boards/driver-arduino-shield">GitHub repo</a>)
 
+At this stage, I'm not thinking too much about how the electronics will be housed. But I got tired of the mess of jumper wires in my tests, nd I'm also thinking ahead to a slightly more integrated solution, so I quickly designed a simple Arduino shield in Eagle to mount my stepper driver, provide an easy connection point for the motor, as well as headers for end-stop switches, and some analogue inputs that I think I might need. 
+
+![]({{site.baseurl}}/assets/motor-driver-shield-and-arduino.jpg)
+
+This board is basically just headers. And I think I may have already made some mistakes (in the wiring of the end-stop connection headers), so it's unlikely to last in this form for long. 
+
+<span class="wip">WIP</span> I'm pretty sure the end-stop switch headers are incorrectly routed on this board. I should confirm it either way. 
+
 
 
 
