@@ -27,8 +27,18 @@ So I ended up using the pre-tapped holes on the business end of the slider, wher
 
 For a future version, I would like to design a mounting system that doesn't rely on tapped holes at all, as there is too much room for error.
 
+## Gantry
 
-## Wheels
+
+
+# End-stop posts on the gantry
+
+I only need one!
+
+
+
+
+### Wheels
 
 I bought [some relatively cheep wheels](https://www.amazon.co.uk/BIQU-Printer-Plastic-Bearings-Passive/dp/B06X9Q9Y8V/ref=sr_1_5?keywords=v+slot+wheels&qid=1556802322&s=gateway&sr=8-5), which are OK, though don't turn as easily as I expected. However, this is my first experience woking with bearings, so I don't know what I should expect. 
 
@@ -46,6 +56,9 @@ Initially, I used washers on the wheel assembly – it's just a convention that 
 
 ## Motor backet
 
+<script src="https://embed.github.com/view/3d/andrewsleigh/fab-slider/blob/master/3d-parts/v1/motor-bracket/motor-bracket.stl"></script>
+
+
 This was a simple part to design. It just needs to hold the motor at 90&deg; against the end of the slider rails.
 
 ![]({{site.baseurl}}/assets/motor-bracket-assembly-diagram.png)
@@ -54,14 +67,18 @@ However, my current design is attached to the rails by bolting through the end-c
 
 
 
+## End-stops
 
-# Cable clips
 
 
 # End-stop wiring
 
 
-# End-stop posts on the gantry
 
-I only need one!
+### Cable clips
+
+I'm running wires from the far end of the slider down towards the  microcontroller board, so I wanted some way of keeping the cables tidy and out of the way. 
+
+Fortunately, Thingiverse has plenty of solutions for this problem, so I printed a few V-slot cable clips that do the job nicely. I used these <a href="www.thingiverse.com/thing:2676595">V-Slot Cable Clips</a>.
+
 
