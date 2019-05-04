@@ -29,6 +29,7 @@ For a future version, I would like to design a mounting system that doesn't rely
 
 ## Gantry
 
+<script src="https://embed.github.com/view/3d/andrewsleigh/fab-slider/master/3d-parts/v1/gantry/gantry.stl"></script>
 
 
 # End-stop posts on the gantry
@@ -56,7 +57,7 @@ Initially, I used washers on the wheel assembly – it's just a convention that 
 
 ## Motor backet
 
-<script src="https://embed.github.com/view/3d/andrewsleigh/fab-slider/blob/master/3d-parts/v1/motor-bracket/motor-bracket.stl"></script>
+<script src="https://embed.github.com/view/3d/andrewsleigh/fab-slider/master/3d-parts/v1/motor-bracket/motor-bracket.stl"></script>
 
 
 This was a simple part to design. It just needs to hold the motor at 90&deg; against the end of the slider rails.
@@ -69,9 +70,10 @@ However, my current design is attached to the rails by bolting through the end-c
 
 ## End-stops
 
+I already had some end-stop switches left over from a previous project. 
 
 
-# End-stop wiring
+### End-stop wiring
 
 
 
