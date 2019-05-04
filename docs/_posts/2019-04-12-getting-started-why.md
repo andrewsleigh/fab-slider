@@ -16,7 +16,7 @@ I would like to make one myself. Right now, there’s almost nothing I know abou
 * A slider is a good candidate for assembly with 3D-printed parts. I’ve done very little 3D printing, so this is a good excuse for me to learn more about it.
 * Many makers photograph their projects poorly. There is a great deal of skill involved, but having the right kit helps too. Along with some good documentation on how to use it, a slider could be helpful here.
 * More broadly, I can foresee a set of fab-able photography tools that together could be adopted more broadly by labs and other maker spaces that would solve more photography and video problems: lighting, backdrops, stands, sound recording, etc.
-* One of the things that appeals to me about the fablab ethos is the culture of sharing and developing a common set of tools. [WIP: Examples]. A good camera slider could be a useful addition to the suite.
+* One of the things that appeals to me about the fablab ethos is the culture of sharing and developing a common set of tools. A good camera slider could be a useful addition to the suite.
 * There are many commercial sliders available, but they tend to be expensive (and of course, not made by you or me). There are many DIY versions, but they are often of indeterminate quality, or poorly documented.
 * Finally, just because I got it into my head.
 
