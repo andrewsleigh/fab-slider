@@ -38,10 +38,20 @@ I mounted one pair of wheels through circular holes in the gantry, and the other
 
 This worked OK in the 3D printed gantry (less so in the laser-cut acrylic version, where there is less friction between the nut and the gantry). It also made it possible to mount and demount the gantry even when the end-caps are fitted, and it can't be slid off an end.
 
-Washers
+### Washers
+
+Initially, I used washers on the wheel assembly – it's just a convention that I've got used to, to add washers to enable free rotation of parts against a tightened nut. But of course, in this assembly, the bearing itself is designed to be held firm in the assembly at the centre, but to rotate freely on the outside. And I found the washers were interfering with this, so I removed them.
 
 
-# Motor backet
+
+## Motor backet
+
+This was a simple part to design. It just needs to hold the motor at 90&deg; against the end of the slider rails.
+
+![]({{site.baseurl}}/assets/motor-bracket-assembly-diagram.png)
+
+However, my current design is attached to the rails by bolting through the end-cap into the threaded holes in the extrusion. That's a solid design, but perhaps les easy for others to replicate. So for a future design, it would be good to think about an alternative approach that doesn't relay on these threaded holes.
+
 
 
 
