@@ -1,6 +1,6 @@
 ---
 permalink: making-v1-building-the-machine/
-title: Making version 1 – Building the machine
+title: Making version 1 – Building the mechanism
 date: 2019-05-02
 author: Andrew
 layout: page
