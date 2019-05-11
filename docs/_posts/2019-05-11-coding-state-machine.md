@@ -1,6 +1,6 @@
 ---
 permalink: coding-state-machine/
-title: Coding version 1 – building a state machine
+title: Coding version 1 – Building a state machine
 date: 2019-05-11
 author: Andrew
 layout: page
