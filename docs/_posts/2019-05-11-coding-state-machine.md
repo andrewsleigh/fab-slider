@@ -1,6 +1,6 @@
 ---
 permalink: coding-state-machine/
-title: Coding a state machine
+title: Coding version 1: building a state machine
 date: 2019-05-11
 author: Andrew
 layout: page
@@ -17,13 +17,13 @@ Paraphrasing from [Wikipedia](https://en.wikipedia.org/wiki/Finite-state_machine
 
 When we’re thinking about useful machines – things that do something, this minimal definition could be expanded a little. Specifically, in each state, there is some sort of output: a light flashes, a motor turns, or an error message is logged. Here’s a description with more of a hardware focus, from [State Machines and Arduino Implementation](https://www.norwegiancreations.com/2017/03/state-machines-and-arduino-implementation/):
 
-> States
+> **States**  
 > An embedded system should at any given time be in a defined state, whether it is “moving left”, “door open”, “stopped”, “init”, “error” or any other imaginable state. The states and the transitions between them make up the main structure of the state machine.
 > 
-> Inputs
+> **Inputs**  
 > Inputs are what makes the system switch states and can for instance be switches, buttons and sensors or any other typical embedded input.
 > 
-> Outputs
+> **Outputs**  
 > Outputs in a state machine can be motor movement, lights or any other typical embedded output.
 
 
@@ -72,14 +72,14 @@ Once it’s calibrated, the motor must remain powered to keep the spindle locked
 
 ### Simplifying
 
-The calibration process (and these extra events) added complexity and  time to the process, and I soon got bored of going through all these steps when testing my code. So I wondered if I could simplify things. What would happen if I just ditched the calibration process, and worked on the assumption that the slider never knew where it was, or where the ends were (until it hit one)? 	
+The calibration process (and these extra events) added complexity and  time to the process, and I soon got bored of going through all these steps when testing my code. So I wondered if I could simplify things. What would happen if I just ditched the calibration process, and worked on the assumption that the slider never knew where it was, or (until it hit a stop switch) where the ends were? 
 
 Sure enough, as I removed this state from the machine, other states also became redundant, and my next version was drastically simpler:
 
 ![]({{site.baseurl}}/assets/slider-state-machine-v4.png)
 
 
-With no calibration step, the slider is ready to accept input as soon as it’s switched on. Rather than moving from one end all the way to the other, in the direction the user specifies, it just moves in that direction from wherever it happens to be at that point, and stops when it hits an end stop. No data about current location or the position of end-stops needs to e retained, so the motor can be switched off whenever it’s stationary. There’s no need for timeouts, manual resets or soft pausing (remembering this data for when the pause is released).
+With no calibration step, the slider is ready to accept input as soon as it’s switched on. Rather than moving from one end all the way to the other, in the direction the user specifies, it just moves in that direction from wherever it happens to be at that point, and stops when it hits an end stop. No data about current location or the position of end-stops needs to be retained, so the motor can be switched off whenever it’s stationary. There’s no need for timeouts, manual resets or soft pausing (remembering this data for when the pause is released).
 
 I’d written all the code for the complex version by the time I figured this out. However, it was a useful lesson in complexity: as you add states to a state machine, complexity increases non-linearly; and can quickly get out of hand. I was also able to dig deeper into the stepper library I’m using. And it was kind of cool watching the machine calibrate itself; so I’m kind of sad to see that go.
 
@@ -87,7 +87,7 @@ I’ve posted the old – complex – code in the repo in case anyone’s intere
 
 
 ## Scaffolding in code
-The code to handle this in Arduino is very simple. First, set up an `enum` (or an array or some other collection) to hold all your possible states:
+The code to handle this in Arduino is very simple. First, set up an `enum` to hold all your possible states:
 
 ```
 enum possibleStates {
@@ -130,19 +130,20 @@ switch (currentState) {
 
 
 ## Further reading
+
 These are some resources I found helpful
 
 **On state machine theory**
 
 * Modeling Software with Finite State Machines (book)
-* https://docs.spring.io/autorepo/docs/spring-statemachine/current-SNAPSHOT/reference/#crashcourse
+* [A State Machine Crash Course](https://docs.spring.io/autorepo/docs/spring-statemachine/current-SNAPSHOT/reference/#crashcourse)
 
 **On diagrams**
 
 * [State diagram - Wikipedia](https://en.wikipedia.org/wiki/State_diagram)
 * [UML state machine - Wikipedia](https://en.wikipedia.org/wiki/UML_state_machine)
-* https://docs.staruml.io/working-with-diagrams/statechart-diagram
-[UML State Machine Diagrams - Overview of Graphical Notation](https://www.uml-diagrams.org/state-machine-diagrams.html)
+* [StarUML documentation: Statechart Diagram](https://docs.staruml.io/working-with-diagrams/statechart-diagram)
+* [UML State Machine Diagrams - Overview of Graphical Notation](https://www.uml-diagrams.org/state-machine-diagrams.html)
 
 **On state machines in Arduino**
 
