@@ -10,9 +10,11 @@ sort_id: 41
 
 I've started to think about the functions needed for the slider to work well, and how these should be implemented in hardware and software.
 
+<hr/>
+
 **Update 2019-05-11:** as a [later post details](../coding-state-machine/), I went a long way down the path of building this: designing a system that would take in all these inputs, and writing code to handle all the events, both intended and unintended. After playing with it, I decided it was too complex, so simplified this considerably. 
 
-
+<hr/>
 
 ## On startup
 
