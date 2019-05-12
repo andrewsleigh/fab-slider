@@ -155,6 +155,6 @@ These are some resources I found helpful
 Some other things I want to talk about soon:
 
 * Understanding the AccelStepper library
-* Building a better debugging system using the Arduino serial monitor
+* [Building a better debugging system using the Arduino serial monitor](../coding-better-debugging/)
 
 
