@@ -133,12 +133,12 @@ switch (currentState) {
 
 ```
 
-For these two variants to work (and to be able to switch them on and off independently, I created a couple more definitions:
+For these two variants to work (and to be able to switch them on and off independently) I created a couple more definitions:
 
 ```
 // comment these out to remove debugging
 #define DEBUG // needed for all debugging
-//#define DEBUG_TIMER // for messages that print every few seconds
+#define DEBUG_TIMER // for messages that print every few seconds
 #define DEBUG_STATE_CHANGE // for messages that print only on a change in the machine state
 ```
 
