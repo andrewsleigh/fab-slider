@@ -29,7 +29,7 @@ There's a nice explanation of these preprocessor keywords here: <https://communi
 > `#if` tests if a condition is true.
 > `#else` provides an alternative case for an `#if`, in case it is not true.
 > `#endif` ends an `#if`
-
+>
 > `#ifdef` tests if a word is defined and `#ifndef` does the opposite - it tests if a word has not been defined.
 
 So at the top of my file, I can include a line like: 
@@ -93,7 +93,17 @@ void printDebugMessages() {
 }
 ```
 
-And I can call that function either from a non-blocking timer that runs inside the main `loop()` and prints messages every couple of seconds:
+This prints out to the serial monitor like so:
+
+```
+------
+Current state:         INIT
+Start from left?       1
+Use time-lapse mode?   0
+Speed:                 2017
+```
+
+I can call that function either from a non-blocking timer that runs inside the main `loop()` and prints messages every couple of seconds:
 
 ```
 #ifdef DEBUG_TIMER
@@ -107,9 +117,19 @@ And I can call that function either from a non-blocking timer that runs inside t
 Or at any other point, for example, every time there is a transition to a new state. 
 
 ```
-#ifdef DEBUG_STATE_CHANGE
-  printDebugMessages();
-#endif
+switch (currentState) {
+  case INIT:
+    
+    #ifdef DEBUG_STATE_CHANGE
+      printDebugMessages();
+    #endif
+  
+    // do the other INIT state stuff
+    // ...
+    
+  // ...
+}  
+
 ```
 
 For these two variants to work (and to be able to switch them on and off independently, I created a couple more definitions:
