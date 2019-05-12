@@ -98,6 +98,7 @@ This prints out to the serial monitor like so:
 ```
 ------
 Current state:         INIT
+Message:               Finished traverse
 Start from left?       1
 Use time-lapse mode?   0
 Speed:                 2017
