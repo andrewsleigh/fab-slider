@@ -40,16 +40,29 @@ while (stepper.currentPosition() != stepper.targetPosition()) {
 
 In this simplified code (the full code is in [traverse.ino](https://github.com/andrewsleigh/fab-slider/blob/master/arduino-code/old-complex-state-machine/State_Machine_6/traverse.ino), the gantry moves from the left end to the right at a constant speed. You can see how the function `moveTo()` doesn't actually move anything. It took me a while to figure that out.
 
+## Getting an end-stop position.
 
+Useful if you want to calibrate the slider so you know where the two ends are:
+
+```
+if (digitalRead(leftEndStopPin) == HIGH) { // if it touches an end-stop 
+  leftEndStopPosition = stepper.currentPosition(); 
+  gotLeftLimit = true; // a boolean variable for tracking calibration status
+  stepper.stop(); 
+  stepper.runToPosition(); 
+}
+```
+
+Note that `stop()` doesn't stop the motor! It just sets a new target at the current position. You then need to `runToPosition` to actually stop the motor.
 
 ## Blocking and non-blocking functions
 
-
+Because I want the user to be able to pause or cancel a slide, and also for the end-stops to be able to halt movement, I can't have the stepper control functions hog block other inputs. Generally, it seems (and I might be wrong) that library functions that implement acceleration are blocking, those that don't aren't... 
 
 
 ## Using acceleration
 
-I think this is the raison d'etre of this library. I think it could be useful for me for two reasons:
+I think this is the raison d'etre of this library. I think it could be useful for me in two scenarios:
 
 1. Giving more naturalistic slides in video mode by easing in at the beginning and easing out at the end of the traverse
 2. Moving heavy loads (like a DSLR camera) with more stability and les risk of motor slippage by avoiding sudden starts and stops
@@ -63,3 +76,5 @@ stepper.runToNewPosition(leftEndStopPosition+endStopPadding);
 ```
 
 This is a blocking function, but that's not a problem in this particular situation.
+
+I need to do some more tests in the two scenarios noted above. I may need to do some more work in my code to implement acceleration and deceleration. <span class="wip">WIP</span>
