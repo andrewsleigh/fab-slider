@@ -115,8 +115,8 @@ Then, use the current limit calculation for your driver to calculate the appropr
 
 However, RS on my boards is a different value. It’s marked `R100` – ie 0.100Ω, so for these boards 
 
-VREF = A * 8 * RS
- = 1.68 * 8 * 0.1
+VREF = A * 8 * RS  
+ = 1.68 * 8 * 0.1  
  = 1.344 V
 
 From [StepStick - RepRap](https://reprap.org/wiki/StepStick):
