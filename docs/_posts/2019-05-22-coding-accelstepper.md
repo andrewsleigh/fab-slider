@@ -81,7 +81,7 @@ I need to do some more tests in the two scenarios noted above. I may need to do 
 
 ## Disabling the motor
 
-I don't want to kep the motor powered when I'm not moving the slider. It uses power, and makes an annoying noise. The library has a [function](https://www.airspayce.com/mikem/arduino/AccelStepper/classAccelStepper.html#a3591e29a236e2935afd7f64ff6c22006) `disableOutputs()` which might do what I want, but I couldn't figure out how to get it to work. So instead, I just connected the ENABLE pin on my driver to one of the Arduino's digital outputs and pulled it high to disable the motor:
+I don't want to keep the motor powered when I'm not moving the slider. It uses power and makes an annoying noise. The library has a [function](https://www.airspayce.com/mikem/arduino/AccelStepper/classAccelStepper.html#a3591e29a236e2935afd7f64ff6c22006) `disableOutputs()` which might do what I want, but I couldn't figure out how to get it to work. So instead, I just connected the ENABLE pin on my driver to one of the Arduino's digital outputs and pulled it high to disable the motor:
 
 ```
 digitalWrite(motorOffPin, HIGH);
