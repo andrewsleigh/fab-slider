@@ -84,20 +84,50 @@ At the moment, I'm driving the motor from the 12V VIN supply on my Arduino, whic
 
 ### Allowing the motor to draw too much current
 
-<span class="wip">WIP</span> This is definitely an area where I need to do more work. See below.
+
+
+<span class="wip">WIP</span> Here's something I don't fully understand. It's easy to blow an LED by allowing it to draw all the current it can – because it has no/low internal resistance. I don't know if limiting the current to a stepper motor works the same way. 
+
+However, it is possible to limit the curent to the motor to within its safe limit using the trimmer potentiometer on the driver board.
+
 
 
 ## Adjusting current draw
 
 Many explanations of these driver boards talk about the need to adjust the current draw using the small trimmer potentiometer. My board even came with a tiny screwdriver for just this purpose.
 
-However, my attempts to do this were physically a mess (it's difficult to connect everything up) and the results were difficult to interpret. (Turning the trimmer seemed to affect the current draw in inconsistent ways, with none of the readings making any sense, given the data I do know about the motor, power supply and so on.)
+My initial attempts to do this were physically a mess (it's difficult to connect everything up) and the results were difficult to interpret. (Turning the trimmer seemed to affect the current draw in inconsistent ways, with none of the readings making any sense, given the data I do know about the motor, power supply and so on.)
 
-The [instructions here](https://lastminuteengineers.com/a4988-stepper-motor-driver-arduino-tutorial/) are the best I've found, but still, my experience wasn't this tidy.
+Eventually I found some [good instructions on the Pololu site](https://www.pololu.com/product/1182/faqs):, and a [very good video](https://www.youtube.com/watch?v=89BHS9hfSUk), and I managed to get some sensible readings from my multimeter.
 
-In the end, I hd to adjust this trimmer to get the motor to work smootly, and that became my measure of where to set it.
+### The process I followed
 
-<span class="wip">WIP</span>
+
+Determine the amount of current you want to use to run the motor: Mine is 1.68A/phase 
+
+Choose a driver with a max current rating higher than the current you want to use to drive you motor
+Then limit the current to below the max rating of the motor. My A4988 driver board is rated at up to 2A per coil
+
+Then, use the current limit calculation for your driver to calculate the appropriate VREF voltage setting . Mine is a Stepstick clone. From [StepStick - RepRap](https://reprap.org/wiki/StepStick):
+
+> To calculate the current, A = VREF / (8 * RS). For a standard stepstick, RS is the rating of the Sense Resistor = 0.2ohm. So A = VREF / 1.6
+> To calculate the VREF for a target current, VREF = A * 8 * RS , or A * 1.6 . So, if you wanted 0.8A, VREF = 0.8 * 1.6 = 1.28V
+
+However, RS on my boards is a different value. It’s marked `R100` – ie 0.100Ω, so for these boards 
+
+VREF = A * 8 * RS
+ = 1.68 * 8 * 0.1
+ = 1.344 V
+
+From [StepStick - RepRap](https://reprap.org/wiki/StepStick):
+> There is a test point for VREF on the Pololu but it is missing on the Stepstick. Since it is just the wiper of the pot you can measure it there and it is easier as it is a bigger target. I hold the positive meter probe on the shaft of a metal screwdriver so I can see the value while I am turning the pot. Put the negative probe on a ground pin.
+
+* By clipping the positive meter lead to a screwdriver and adjusting the trimmer pot, I can get a range of 0 - 1.12V.  All within the limit of my motor.
+
+### Making use of the 70% current headroom?
+
+As per the A4988 datasheet, on full step mode, the driver only sets the coil current to 70.71% , however, if you use micro-stepping mode, as I intend to, it does use 100% of the current on some steps, so this gives me no room to increase the current more. 
+
 
 ## Simple programs
 
