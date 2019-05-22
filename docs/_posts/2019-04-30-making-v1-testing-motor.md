@@ -126,7 +126,7 @@ From [StepStick - RepRap](https://reprap.org/wiki/StepStick):
 
 ### Making use of the 70% current headroom?
 
-As per the A4988 datasheet, on full step mode, the driver only sets the coil current to 70.71% , however, if you use micro-stepping mode, as I intend to, it does use 100% of the current on some steps, so this gives me no room to increase the current more. 
+As per the A4988 datasheet, on full step mode, the driver only sets the coil current to 70.71%, however, if you use micro-stepping mode, as I intend to, it does use 100% of the current on some steps, so this gives me no room to increase the current more. 
 
 
 ## Simple programs
