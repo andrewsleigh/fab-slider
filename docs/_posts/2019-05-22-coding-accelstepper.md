@@ -53,11 +53,11 @@ if (digitalRead(leftEndStopPin) == HIGH) { // if it touches an end-stop
 }
 ```
 
-Note that `stop()` doesn't stop the motor! It just sets a new target at the current position. You then need to `runToPosition` to actually stop the motor.
+Note that `stop()` doesn't stop the motor! It just sets a new target at the current position. You then need to `runToPosition()` to actually stop the motor.
 
 ## Blocking and non-blocking functions
 
-Because I want the user to be able to pause or cancel a slide, and also for the end-stops to be able to halt movement, I can't have the stepper control functions hog block other inputs. Generally, it seems (and I might be wrong) that library functions that implement acceleration are blocking, those that don't aren't... 
+Because I want the user to be able to pause or cancel a slide, and also for the end-stops to be able to halt movement, I can't have the stepper control functions block other inputs. Generally, it seems (and I might be wrong) that library functions that implement acceleration are blocking, those that don't aren't... 
 
 
 ## Using acceleration
@@ -78,3 +78,17 @@ stepper.runToNewPosition(leftEndStopPosition+endStopPadding);
 This is a blocking function, but that's not a problem in this particular situation.
 
 I need to do some more tests in the two scenarios noted above. I may need to do some more work in my code to implement acceleration and deceleration. <span class="wip">WIP</span>
+
+## Disabling the motor
+
+I don't want to kep the motor powered when I'm not moving the slider. It uses power, and makes an annoying noise. The library has a [function](https://www.airspayce.com/mikem/arduino/AccelStepper/classAccelStepper.html#a3591e29a236e2935afd7f64ff6c22006) `disableOutputs()` which might do what I want, but I couldn't figure out how to get it to work. So instead, I just connected the ENABLE pin on my driver to one of the Arduino's digital outputs and pulled it high to disable the motor:
+
+```
+digitalWrite(motorOffPin, HIGH);
+```
+
+From the datasheet:
+
+> Enable Input
+> This input turns on or off all of the FET outputs. When set to a logic high, the outputs are disabled. When set to a logic low, the internal control enables the outputs as required. The translator inputs STEP, DIR, and MSx, as well as the internal sequencing logic, all remain active, independent of the ENABLE input state. 
+
