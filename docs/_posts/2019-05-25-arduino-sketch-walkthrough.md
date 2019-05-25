@@ -7,12 +7,14 @@ layout: page
 sort_id: 54
 ---
 
+I've got the Arduino code to the stage where it's good enough for the version 1 machine. There's a lot I'd like to change for the next version, though mostly on the hardware side, but here seems like a good place to take and share a snapshot.
 
-This is a lightly documented version of the code for the first version of my camera slider. This is much simplified from the [old complex state machine](../coding-state-machine/). 
-
-Here is a diagram of the simpler state machine I'm building in this code:
+This post is just is a lightly documented version of the code for the first version of my camera slider. This is much simplified from the [old complex state machine](../coding-state-machine/). Here's a diagram of the simpler state machine I'm building in this code:
 
 ![]({{site.baseurl}}/assets/slider-state-machine-v4.png)
+
+All the code is here:
+<https://github.com/andrewsleigh/fab-slider/tree/master/arduino-code/v1>
 
 
 ## Libraries
