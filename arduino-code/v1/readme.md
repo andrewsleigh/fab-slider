@@ -178,7 +178,7 @@ Inside the main loop, we first check the state of the push-button, as this has s
 
 Then we switch through all of the possible machine states, printing any debug messages if required, calling the functions for that state, and checking to see if the push button has been pressed in case we need to switch to a different state.  
 
-After the stae machine switch, we just check to see if continuous debug messages need to be printed.
+After the state machine switch, we just check to see if continuous debug messages need to be printed.
 
 ```
 void loop() {
@@ -275,14 +275,7 @@ void loop() {
 
 These functions are called from different states within the main loop. 
 
-`setLEDStatus` switches based on the possible values of the enum we set up earlier called `possibleStates`. An easy mistake here is to write this function as:
-
-```
-void setLEDStatus(enum possibleStates) {
-}
-```
-
-But of course the parameter type is `possibleStates` not `enum` (even though `possibleStates` is a kind of `enum` we created earlier).
+`setLEDStatus` switches based on the possible values of the enum we set up earlier called `possibleStates`. An easy mistake here is to write this function as: `void setLEDStatus(enum possibleStates) {}`. But of course the parameter type is `possibleStates` not `enum` (even though `possibleStates` is a kind of `enum` we created earlier).
 
 ```
 void setLEDStatus(possibleStates currentStateForLED) {
