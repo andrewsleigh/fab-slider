@@ -4,7 +4,7 @@ title: Coding version 1 – Walkthrough of the Arduino sketch
 date: 2019-05-25
 author: Andrew
 layout: page
-sort_id: 54
+sort_id: 64
 ---
 
 I've got the Arduino code to the stage where it's good enough for the version 1 machine. There's a lot I'd like to change for the next version, though mostly on the hardware side, but here seems like a good place to take and share a snapshot.
