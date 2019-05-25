@@ -285,7 +285,7 @@ void loop() {
 
 These functions are called from different states within the main loop. 
 
-`setLEDStatus` switches based on the possible values of the enum we set up earlier called `possibleStates`. An easy mistake here is to write this function as: `void setLEDStatus(enum possibleStates) {}`. But of course the parameter type is `possibleStates` not `enum` (even though `possibleStates` is a kind of `enum` we created earlier).
+`setLEDStatus` switches based on the possible values of the enum we set up earlier called `possibleStates`. An easy mistake here is to write this function as: `void setLEDStatus(enum possibleStates) {}`. But of course the parameter type is `possibleStates`, not `enum` (even though `possibleStates` is a kind of `enum` we created earlier).
 
 ```
 void setLEDStatus(possibleStates currentStateForLED) {
@@ -347,7 +347,7 @@ void getControlInputs() {
 }
 ```
 
-For the motion itself, I'm using the AccelStepper library. I documented some of my trials with that [here](https://andrewsleigh.com/fab-slider/coding-accelstepper/): 
+For the motion itself, I'm using the AccelStepper library. I documented some of my trials with that [here](../coding-accelstepper/): 
 
 ```
 void traverse() {
@@ -387,7 +387,7 @@ void switchOnMotor() {
 }
 ```
 
-And finally there's a function handle printing the current stus to the serial monitor:
+And finally there's a function handle printing the current status to the serial monitor:
 
 ```
 void printDebugMessages() {
