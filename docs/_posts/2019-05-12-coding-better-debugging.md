@@ -133,6 +133,9 @@ switch (currentState) {
 
 ```
 
+Update: in [later versions](https://github.com/andrewsleigh/fab-slider/tree/master/arduino-code/v1/camera_slider_v1) I added a check for the state change variant to see if the machine has just entered a new state. If so, a message is printed (and the new state flag cleared), otherwise, not. This avoids the status messages being endlessly repeated as the code loops around around state.
+
+
 For these two variants to work (and to be able to switch them on and off independently) I created a couple more definitions:
 
 ```
