@@ -1,10 +1,11 @@
 ---
 permalink: design-v1-rails/
-title: Designing version 1 – Aluminium extrusion rails
+title: Aluminium extrusion rails
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 31
+sort_tag: v1_design
 ---
 
 The rails provide the main structure of the slider, and are also the guide surface along which the gantry slides.

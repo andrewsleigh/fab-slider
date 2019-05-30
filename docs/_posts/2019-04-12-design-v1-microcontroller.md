@@ -1,10 +1,11 @@
 ---
 permalink: design-v1-microcontroller/
-title: Designing version 1 – Microcontroller
+title: Microcontroller
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 34
+sort_tag: v1_design
 ---
 
 

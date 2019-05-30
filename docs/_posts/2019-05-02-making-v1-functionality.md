@@ -1,10 +1,11 @@
 ---
 permalink: making-v1-functionality/
-title: Making version 1 – Basic functionality
+title: Basic functionality
 date: 2019-05-02
 author: Andrew
 layout: page
 sort_id: 41
+sort_tag: v1_making
 ---
 
 

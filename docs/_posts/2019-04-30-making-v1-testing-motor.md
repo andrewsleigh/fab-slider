@@ -1,10 +1,11 @@
 ---
 permalink: making-v1-testing-motor/
-title: Making version 1 – Testing the motor and driver
+title: Testing the motor and driver
 date: 2019-04-30
 author: Andrew
 layout: page
 sort_id: 40
+sort_tag: v1_making
 ---
 
 Having never used a stepper motor before, I started by trying to get my head around how these can be controlled via Arduino.

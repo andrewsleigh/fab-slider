@@ -1,10 +1,11 @@
 ---
 permalink: getting-started-why/
-title: Getting started – Why am I doing this, and what am I trying to make?
+title: Why am I doing this, and what am I trying to make?
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 10
+sort_tag: v1_getting_started
 ---
 
 ## Introduction

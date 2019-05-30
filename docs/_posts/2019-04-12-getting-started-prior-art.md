@@ -1,10 +1,11 @@
 ---
 permalink: getting-started-prior-art/
-title: Getting started – Prior art
+title: Prior art
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 11
+sort_tag: v1_getting_started
 ---
 
 

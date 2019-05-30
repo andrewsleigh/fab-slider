@@ -1,10 +1,11 @@
 ---
 permalink: design-v1-driver/
-title: Designing version 1 – Stepper motor driver
+title: Stepper motor driver
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 33
+sort_tag: v1_design
 ---
 
 I don't know if it's actually possible to drive a stepper motor directly from an Arduino, but certainly all the projects I've seen use a separate driver chip on another board that can be connected to the microcontroller.

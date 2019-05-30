@@ -1,10 +1,11 @@
 ---
 permalink: design-v1-endstops/
-title: Designing version 1 – Endstops
+title: Endstops
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 37
+sort_tag: v1_design
 ---
 
 There needs to be some way to put power to the motor when the gantry reaches the end of its travel. It may also be useful to have a way of calibrating the slider so it knows where its endpoints are. This is what end-stops are for.

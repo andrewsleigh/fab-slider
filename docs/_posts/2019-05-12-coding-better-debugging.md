@@ -1,10 +1,11 @@
 ---
 permalink: coding-better-debugging/
-title: Coding version 1 – Better debugging with the serial monitor
+title: Better debugging with the serial monitor
 date: 2019-05-12
 author: Andrew
 layout: page
 sort_id: 52
+sort_tag: v1_code
 ---
 
 Up until now, my approach to debugging has just been to litter my code with `Serial.println()` statements that print some input value to the serial monitor, scrolling on for eternity. They're quick to implement, and better than nothing, but I find them messy, easy to get wrong (and give misleading information), and for a project of any complexity, they quickly become confusing to interpret.

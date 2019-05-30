@@ -1,10 +1,11 @@
 ---
 permalink: design-v1-gantry/
-title: Designing version 1 – Gantry
+title: Gantry
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 36
+sort_tag: v1_design
 ---
 
 The gantry is basically just a flat plate with mounting holes for attaching different devices, and for the wheels and timing belt.

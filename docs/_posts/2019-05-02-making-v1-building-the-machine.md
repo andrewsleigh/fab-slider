@@ -1,10 +1,11 @@
 ---
 permalink: making-v1-building-the-machine/
-title: Making version 1 – Building the mechanism
+title: Building the mechanism
 date: 2019-05-02
 author: Andrew
 layout: page
 sort_id: 42
+sort_tag: v1_making
 ---
 
 I had a few days access to the fablab, so I tried to make as much of the physical hardware as I could so I could work on the motion control software later. One of [my original aims for the project](../getting-started-why/) was to try and learn more about 3D printing, and I was very successful in this aspect. I [modelled the whole assembly in Fusion 360](https://github.com/andrewsleigh/fab-slider/tree/master/3d-parts/v1/assembly) and 3D-printed several iterations of key parts on our Creality CR-10 printer. I had a lot of fun with it.

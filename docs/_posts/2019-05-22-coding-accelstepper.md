@@ -1,10 +1,11 @@
 ---
 permalink: coding-accelstepper/
-title: Coding version 1 – Understanding the AccelStepper library
+title: Understanding the AccelStepper library
 date: 2019-05-22
 author: Andrew
 layout: page
 sort_id: 53
+sort_tag: v1_code
 ---
 
 I decided to use the AccelStepper library to handle motion control for this project. As my state machine became simpler, I suspect the need for this became less urgent, and I could have made do with the standard Arduino stepper library, or even just written some functions myself to control the motor directly by pulsing the step pin.  

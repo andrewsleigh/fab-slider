@@ -1,10 +1,11 @@
 ---
 permalink: design-v1-main-components/
-title: Designing version 1 – Main components
+title: Main components
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 30
+sort_tag: v1_design
 ---
 
 ## Sketch

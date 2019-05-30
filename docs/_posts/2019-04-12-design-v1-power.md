@@ -1,10 +1,11 @@
 ---
 permalink: design-v1-power/
-title: Designing version 1 – Power supply
+title: Power supply
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 35
+sort_tag: v1_design
 ---
 
 From [Stepper Motor Quickstart Guide - SparkFun Electronics](https://www.sparkfun.com/tutorials/400):

@@ -1,10 +1,11 @@
 ---
 permalink: design-v1-motor/
-title: Designing version 1 – Stepper motor
+title: Stepper motor
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 32
+sort_tag: v1_design
 ---
 
 This project requires a stepper motor. For background on motors, see:

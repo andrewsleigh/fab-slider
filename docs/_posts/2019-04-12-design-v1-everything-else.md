@@ -1,10 +1,11 @@
 ---
 permalink: design-v1-everything-else/
-title: Designing version 1 – Everything else
+title: Everything else
 date: 2019-04-12
 author: Andrew
 layout: page
 sort_id: 38
+sort_tag: v1_design
 ---
 
 I will also need to design and make/buy a load of other things, which I haven't thought through fully yet.
