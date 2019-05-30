@@ -2,6 +2,7 @@
 layout: page
 ---
 
+<!-- 
 
 <h2>Files</h2>
 
@@ -13,15 +14,147 @@ Current version on Github: <a href="https://github.com/andrewsleigh/fab-slider">
 	<li><a href="https://github.com/andrewsleigh/fab-slider/tree/master/boards/">Circuit boards</a></li>
 	<li><a href="https://github.com/andrewsleigh/fab-slider/tree/master/arduino-code">Arduino code</a></li>
 	</ul>
+ -->
+<h3>Work-in-Progress Journal</h3>
 
-<h2>Journal</h2>
+<p>
+These pages are my documentation and working notes as I develop this project: an easily-fabricated high-quality motorised camera slider for shooting timelapse or videos, espeically of maker or fablab projects. This is what it looks like as of version 1.
+</p>
 
-<ul>
-{% assign sortedJournal = site.posts | sort: 'sort_id' %}
+<p>
+<img src="assets/IMG_2026.jpg" alt="v1 slider complete" />
+</p>
+
+<p>
+And here's a short demo video of a timelapse:
+</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r8nMpmrksCw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>
+All the files referenced below are in the GitHub repo:
+<a href="https://github.com/andrewsleigh/fab-slider">andrewsleigh/fab-slider</a>, as indeed are <a href="https://github.com/andrewsleigh/fab-slider/tree/master/docs">these docs</a>.
+</p>
+
+<hr/>
+
+<table class="invisibleTable">
+<!-- 
+	<thead>
+	<tr>
+		<th><h3>Version 1</h3></th>
+		<th><h3>Files</h3></th>
+	</tr>
+	</thead>
+ -->
+	<tbody>
+	<!-- 
+
+		<tr><td colspan="2"><img src="assets/IMG_2026.jpg" alt="v1 slider complete" />
+		</td></tr>
+	
+	
+	
+ -->
+	
+	<tr><td colspan="2"><h3>Getting started</h3></td></tr>
+	
+	<tr>
+
+		<td>
+
+		<ol>
+		{% assign sortedJournal = site.posts | where:"sort_tag","v1_getting_started" | sort: 'sort_id' %}
   {% for item in sortedJournal %}
 <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
 <!-- <p>{{ item.excerpt }}</p> -->
 {% endfor %}
-</ul>
+</ol>
+		</td>
+		<td>
+		
+<!-- 
+<p>
+Everything is in the GitHub repo: <br/>
+<a href="https://github.com/andrewsleigh/fab-slider">andrewsleigh/fab-slider</a>
+</p>
+ -->
+
+		</td>
+	</tr>
+<tr>
+	<td colspan="2">	<h3>Design</h3></td>
+</tr>
+	<tr>
+	
+		<td>
+	
+		<ol>{% assign sortedJournal = site.posts | where:"sort_tag","v1_design" | sort: 'sort_id' %}
+  {% for item in sortedJournal %}
+<li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+<!-- <p>{{ item.excerpt }}</p> -->
+{% endfor %}
+</ol>
+		</td>
+		<td>
+		
+	<p>
+	All the 3D parts:<br/>
+		<a href="https://github.com/andrewsleigh/fab-slider/tree/master/3d-parts/v1">3d-parts/v1</a>
+</p>
+		
+		
+<p>
+		Board design and docs for my A4988 stepper driver Arduino shield:</br/>
+		<a href="https://github.com/andrewsleigh/fab-slider/tree/master/boards/driver-arduino-shield/v1">boards/driver-arduino-shield/v1/</a>
+		
+</p>
+
+		
+		
+		</td>
+	</tr>
+<tr>			<td colspan="2"><h3>Building the machine</h3></td></tr>
+	<tr>
+
+		<td>
+		
+		<ol>
+				{% assign sortedJournal = site.posts | where:"sort_tag","v1_making" | sort: 'sort_id' %}
+  {% for item in sortedJournal %}
+<li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+<!-- <p>{{ item.excerpt }}</p> -->
+{% endfor %}</ol>
+</td>
+		<td></td>
+	</tr>
+<tr>		<td colspan="2"><h3>Software and machine control</h3></td></tr>
+	<tr>
+
+		<td>
+		
+		<ol>
+				{% assign sortedJournal = site.posts | where:"sort_tag","v1_code" | sort: 'sort_id' %}
+  {% for item in sortedJournal %}
+<li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+<!-- <p>{{ item.excerpt }}</p> -->
+{% endfor %}</ol></td>
+		<td>
+
+<p>
+The Arduino code for this version is at:
+<br/><a href="https://github.com/andrewsleigh/fab-slider/tree/master/arduino-code/v1">arduino-code/v1/</a>
+</p>
+		
+<p>
+Also some code for an older, more complex state machine:<br/>
+<a href="https://github.com/andrewsleigh/fab-slider/tree/master/arduino-code/old-complex-state-machine">arduino-code/old-complex-state-machine/</a>
+</p>
+		
+		</td>
+	</tr>
+	</tbody>
+</table>
+
 
 <hr/>
