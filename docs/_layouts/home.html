@@ -153,6 +153,29 @@ Also some code for an older, more complex state machine:<br/>
 		
 		</td>
 	</tr>
+	
+	
+	
+<tr>		<td colspan="2"><h3>Review</h3></td></tr>
+	<tr>
+
+		<td>
+		
+		<ol>
+				{% assign sortedJournal = site.posts | where:"sort_tag","v1_review" | sort: 'sort_id' %}
+  {% for item in sortedJournal %}
+<li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+<!-- <p>{{ item.excerpt }}</p> -->
+{% endfor %}</ol></td>
+		<td>
+
+
+		
+		</td>
+	</tr>
+	
+	
+	
 	</tbody>
 </table>
 
