@@ -57,7 +57,7 @@ All the files referenced below are in the GitHub repo:
 	
  -->
 	
-	<tr><td colspan="2"><h3>Getting started</h3></td></tr>
+	<tr><td colspan="2"><h3>v.1 Getting started</h3></td></tr>
 	
 	<tr>
 
@@ -83,7 +83,7 @@ Everything is in the GitHub repo: <br/>
 		</td>
 	</tr>
 <tr>
-	<td colspan="2">	<h3>Design</h3></td>
+	<td colspan="2">	<h3>v.1 Design</h3></td>
 </tr>
 	<tr>
 	
@@ -114,7 +114,7 @@ Everything is in the GitHub repo: <br/>
 		
 		</td>
 	</tr>
-<tr>			<td colspan="2"><h3>Building the machine</h3></td></tr>
+<tr>			<td colspan="2"><h3>v.1 Building the machine</h3></td></tr>
 	<tr>
 
 		<td>
@@ -128,7 +128,7 @@ Everything is in the GitHub repo: <br/>
 </td>
 		<td></td>
 	</tr>
-<tr>		<td colspan="2"><h3>Software and machine control</h3></td></tr>
+<tr>		<td colspan="2"><h3>v.1 Software and machine control</h3></td></tr>
 	<tr>
 
 		<td>
@@ -156,7 +156,7 @@ Also some code for an older, more complex state machine:<br/>
 	
 	
 	
-<tr>		<td colspan="2"><h3>Review</h3></td></tr>
+<tr>		<td colspan="2"><h3>v.1 Review</h3></td></tr>
 	<tr>
 
 		<td>
@@ -174,7 +174,25 @@ Also some code for an older, more complex state machine:<br/>
 		</td>
 	</tr>
 	
+		
 	
+<tr>		<td colspan="2"><h3>v.2 Design</h3></td></tr>
+	<tr>
+
+		<td>
+		
+		<ol>
+				{% assign sortedJournal = site.posts | where:"sort_tag","v2_design" | sort: 'sort_id' %}
+  {% for item in sortedJournal %}
+<li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+<!-- <p>{{ item.excerpt }}</p> -->
+{% endfor %}</ol></td>
+		<td>
+
+
+		
+		</td>
+	</tr>
 	
 	</tbody>
 </table>
