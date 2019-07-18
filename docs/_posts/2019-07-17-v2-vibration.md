@@ -4,7 +4,7 @@ title: Addressing vibration with a different stepper driver
 date: 2019-07-17
 author: Andrew
 layout: page
-sort_id: 71
+sort_id: 81
 sort_tag: v2_design
 ---
 
