@@ -6,4 +6,4 @@ Or see `docs/_posts/` in this repo.
 
 Currently no code; I'm still designing it.
 
-![fab-slider-v2-hero.jpg](docs/assets/fab-slider-v2-hero.jpg")
+![fab-slider-v2-hero.jpg](docs/assets/fab-slider-v2-hero.jpg)
