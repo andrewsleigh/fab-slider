@@ -9,8 +9,11 @@ A fab-able DIY motorised camera slider
 * [3D and 2D files for the assembly are all here](3d-parts/v1)
 * [Arduino sketch here](arduino-code/v2)
 
+This project is designed to be easily replicated, adapted or hacked on by anyone with access to typical fablab tools. 
 
-This project is primarily an exercise in learning: how to use a 3D printer, how use an Arduino, how to design circuit boards, how to assemble a machine, and so on, so really, it's all about the documentation, which is here:
+It's primarily an exercise in learning: how to use a 3D printer; how use an Arduino; how to design circuit boards; how to assemble a machine, and so on. 
+
+So really, it's all about the documentation, which is here:
 
 * <https://andrewsleigh.com/fab-slider/>
 * Or see [`docs/_posts/`](docs/_posts/) in this repo
