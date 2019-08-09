@@ -16,9 +16,9 @@ The back side of the board, which just has female headers for the Nano and drive
 
 ## Layout diagrams
 
-![Front]({{ "/assets/tmc2130-driver-arduino-shield-v3-diagram-front.png" | relative_url }})
+![Front]("tmc2130-driver-arduino-shield-v3-diagram-front.png")
 
-![Back]({{ "tmc2130-driver-arduino-shield-v3-diagram-back.png" | relative_url }})
+![Back]("tmc2130-driver-arduino-shield-v3-diagram-back.png")
 
 This is the release version of the board design. It works with the release version of the Arduino code at [../../../arduino-code/v2](../../../arduino-code/v2).
 
