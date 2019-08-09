@@ -6,19 +6,19 @@ This is version 3 of a board to use a stepper driver (a TMC2130) with an Arduino
 
 The front (copper side) of the board, with all traces and user-facing components:
 
-![]({{ "/assets/IMG_2542.jpg" | relative_url }})
+![](IMG_2542.jpg)
 
 The back side of the board, which just has female headers for the Nano and driver module, and male headers for connections to the motor and end stops:
 
-![]({{ "/assets/IMG_2543.jpg" | relative_url }})
+![](IMG_2543.jpg)
 
 (Not visible here is the smoothing capacitor underneath the driver module.)
 
 ## Layout diagrams
 
-![Front]("tmc2130-driver-arduino-shield-v3-diagram-front.png")
+![Front](tmc2130-driver-arduino-shield-v3-diagram-front.png)
 
-![Back]("tmc2130-driver-arduino-shield-v3-diagram-back.png")
+![Back](tmc2130-driver-arduino-shield-v3-diagram-back.png)
 
 This is the release version of the board design. It works with the release version of the Arduino code at [../../../arduino-code/v2](../../../arduino-code/v2).
 
