@@ -16,7 +16,12 @@ The back side of the board, which just has female headers for the Nano and drive
 
 ## Layout diagrams
 
+### Front
+
 ![Front](tmc2130-driver-arduino-shield-v3-diagram-front.png)
+
+
+### Back
 
 ![Back](tmc2130-driver-arduino-shield-v3-diagram-back.png)
 
