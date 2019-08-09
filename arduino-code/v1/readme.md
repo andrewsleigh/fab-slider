@@ -1,6 +1,6 @@
 # Readme
 
-This is a lightly documented version of the code for the first version of my camera slider. This is much simplified from the old complex state machine. 
+This is a lightly documented version of the code for the first (pre-release) version of my camera slider. This is much simplified from the old complex state machine. 
 
 Here is a diagram of the simpler state machine I'm building in this code:
 
