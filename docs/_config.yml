@@ -16,7 +16,7 @@
 title: Fab Slider
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  A fab-able DIY motorised camera slider
+  A fab-able motorised camera slider
 baseurl: "/fab-slider" # the subpath of your site, e.g. /blog
 url: "https://andrewsleigh.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: andrewsleigh
