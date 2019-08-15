@@ -33,6 +33,12 @@ Fab slider is a simple machine for shooting moving time-lapse videos or panning 
 It's also a tool for learning: about motors and motion control; 3D design and printing; Arduino programming; the design process, iteration and problem-solving. All my notes from the initial idea through several versions to the current machine are <a href="https://github.com/andrewsleigh/fab-slider/tree/master/docs">published as part of the project</a>.
 </p>
 
+<h3>Samples</h3> 
+
+<div class="video-responsive">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/jfUBC_XnyGQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <div class = "highlight">
 
 <h3>Files</h3>
@@ -213,22 +219,47 @@ Also some code for an older, more complex state machine:<br/>
 {% endfor %}</ol></td>
 		<td>
 <p>Eagle board designs for the v.2 and v.3 shields: 
-<a href="https://github.com/andrewsleigh/fab-slider/tree/master/boards/driver-arduino-shield/v2">/boards/driver-arduino-shield/v2<br/>
-<a href="https://github.com/andrewsleigh/fab-slider/tree/master/boards/driver-arduino-shield/v3">/boards/driver-arduino-shield/v3
+<a href="https://github.com/andrewsleigh/fab-slider/tree/master/boards/driver-arduino-shield/v2">/boards/driver-arduino-shield/v2</a><br/>
+<a href="https://github.com/andrewsleigh/fab-slider/tree/master/boards/driver-arduino-shield/v3">/boards/driver-arduino-shield/v3</a>
 </p>
 
 
+<p>
 Electronics housing:
 <a href="https://github.com/andrewsleigh/fab-slider/tree/master/3d-parts/v1/electronics-face-plate">/3d-parts/v1/electronics-face-plate</a>
+</p>
 
+<p>
 Arduino code:
 <a href="https://github.com/andrewsleigh/fab-slider/tree/master/arduino-code/v2">/arduino-code/v2</a>
+</p>
 		
 		</td>
 	</tr>
+
+		
+	
+<tr>		<td colspan="2"><h3>v.2 Result</h3></td></tr>
+	<tr>
+
+		<td>
+		
+		<ol>
+				{% assign sortedJournal = site.posts | where:"sort_tag","v2_result" | sort: 'sort_id' %}
+  {% for item in sortedJournal %}
+<li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+<!-- <p>{{ item.excerpt }}</p> -->
+{% endfor %}</ol></td>
+		<td>
+<p>
+</p>
+
+		
+		</td>
+	</tr>
+	
 	
 	</tbody>
 </table>
 
 
-<hr/>
