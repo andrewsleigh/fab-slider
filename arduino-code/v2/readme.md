@@ -1,6 +1,5 @@
 # Readme
 
-This is a lightly documented version of the code for the first release version of my camera slider (v2 in this repo). This is much simplified from the old complex state machine (and quite similar to the v1 code). 
 
 ## Recent changes
 
@@ -16,6 +15,10 @@ Some small modification following testing for version 2.1
 Here is a diagram of the simpler state machine I'm building in this code:
 
 ![](slider-state-machine-v4.png)
+
+<hr/>
+
+This is a lightly documented version of the code for the first release version of my camera slider (v2 in this repo). This is much simplified from the old complex state machine (and quite similar to the v1 code). 
 
 
 ## Libraries
